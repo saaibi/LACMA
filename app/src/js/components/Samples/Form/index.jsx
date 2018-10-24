@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Fields from './Partials/Fields';
+import Collapsibles from './Partials/Collapsibles';
+
 import ActionBar from './Partials/ActionBar';
 
 const Form = (props) => (
 	<div className="row">
-		<Fields loadClient={props.loadClient} />
-		<ActionBar createClient={props.createClient} />
+		<Collapsibles />
+		<ActionBar createSample={props.createSample} />
 	</div>
 );
 

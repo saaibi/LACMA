@@ -14,7 +14,7 @@ const CollapsibleItems = ({ header, icon, content, className, expanded }) => (
 );
 
 CollapsibleItems.defaultProps = {
-    header: 'LPA',
+    header: 'LACMA',
     icon: 'indeterminate_check_box',
 };
 

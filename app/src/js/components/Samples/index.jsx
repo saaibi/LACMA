@@ -10,11 +10,11 @@ class Sample extends Component {
     }
 
     createSample = (params) => {
-
+        console.log("Create Sample")
     }
 
     loadSample = (params) => {
-
+        console.log("load Sample")
     }
 
     render() {
