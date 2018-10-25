@@ -6,6 +6,7 @@ import { history } from "../store";
 import { AppClient } from "../components/Clients/RoutComp";
 import { AppSample } from "../components/Samples/RoutComp";
 import { AppResult } from "../components/Results/RoutComp";
+import { AppProducts } from "../components/Products/RoutComp";
 
 const Routes = () => {
   return (
@@ -15,6 +16,7 @@ const Routes = () => {
           <Route path="/clients" component={AppClient} />
           <Route path="/results" component={AppResult} />
           <Route path="/samples" component={AppSample} />
+          <Route path="/products" component={AppProducts} />
         </div>
       </Router>
     </div>
