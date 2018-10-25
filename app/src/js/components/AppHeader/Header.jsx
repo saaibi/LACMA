@@ -22,7 +22,7 @@ const Header = () => (
                     <div className="background">
                         <img src="/app/public/images/office.jpg" />
                     </div>
-                    <a href="#user"><img className="circle" src="/app/public/images/yuna.jpg" /></a>
+                    <Link to="/"><img className="circle" src="/app/public/images/yuna.jpg" /></Link>
                     <a href="#name"><span className="white-text name">Saaibi Florez</span></a>
                     <a href="#email"><span className="white-text email">saaibiflorezhernandez@gmail.com</span></a>
                 </div>

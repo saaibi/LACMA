@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 
 class AppLogin extends Component {
@@ -9,8 +9,9 @@ class AppLogin extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1>Login!!!</h1>
+                <Link to="/register" className="waves-effect waves-light blue lighten-1 btn">Register</Link>
             </div>
         )
     }

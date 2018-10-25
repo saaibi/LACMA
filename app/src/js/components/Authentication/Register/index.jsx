@@ -1,16 +1,30 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import Form from './Form';
+import AppHeader from '../../AppHeader';
 
 class AppRegister extends Component {
     state = {
+        user: {
+            firstName: '',
+            lastName: '',
+            username: '',
+            password: ''
+        },
+        submitted: false
+    }
+    handleChange = (event) => {
+
+    }
+    handleSubmit = (event) => {
 
     }
 
     render() {
         return (
-            <div>
-                <h1>Register!!!</h1>
+            <div className="container">
+                <AppHeader name="REGISTRO" />
+                <Form handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
             </div>
         )
     }
