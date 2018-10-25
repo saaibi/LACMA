@@ -17,22 +17,22 @@ const Collapsibles = (props) => {
             />
             <CollapsibleItem
                 header="Fechas"
-                icon='credit_card'
+                icon='insert_invitation'
                 content={<FieldsFechas loadSample={props.loadSample} />}
             />
             <CollapsibleItem
                 header="Detail"
-                icon='credit_card'
+                icon='chrome_reader_mode'
                 content={<FieldsDetails loadSample={props.loadSample} />}
             />
             <CollapsibleItem
                 header="Selección de Producto"
-                icon='credit_card'
+                icon='card_travel'
                 content={<SelectProduct loadSample={props.loadSample} />}
             />
             <CollapsibleItem
                 header="Datos y Cálculos "
-                icon='credit_card'
+                icon='dialpad'
                 content="¡¡¡¡¡ Ready !!!!"
             />
         </Collapsible>

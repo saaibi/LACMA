@@ -15,7 +15,7 @@ const Fields = (props) => (
 			name="NombreProducto"
 			text="Nombre Producto"
 			autoFocus={true}
-			icon="account_circle"
+			icon="assignment_ind"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
@@ -24,7 +24,7 @@ const Fields = (props) => (
 			id="area"
 			name="Area"
 			text="Area"
-			icon="perm_identity"
+			icon="insert_drive_file"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
@@ -32,7 +32,7 @@ const Fields = (props) => (
 			id="parametro"
 			name="Parametro"
 			text="Parametro"
-			icon="fingerprint"
+			icon="description"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
@@ -40,7 +40,7 @@ const Fields = (props) => (
 			id="resultado"
 			name="Resultado"
 			text="Resultado"
-			icon="fingerprint"
+			icon="assessment"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
@@ -48,7 +48,7 @@ const Fields = (props) => (
 			id="limite_min"
 			name="LimiteMin"
 			text="Limite Min"
-			icon="fingerprint"
+			icon="remove"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
@@ -56,7 +56,7 @@ const Fields = (props) => (
 			id="limite_max"
 			name="LimiteMax"
 			text="Limite Max"
-			icon="fingerprint"
+			icon="add"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
@@ -64,7 +64,7 @@ const Fields = (props) => (
 			id="metodo"
 			name="Metodo"
 			text="Metodo"
-			icon="fingerprint"
+			icon="art_track"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>

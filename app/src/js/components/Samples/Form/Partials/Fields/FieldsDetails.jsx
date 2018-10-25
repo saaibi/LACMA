@@ -22,7 +22,7 @@ const Fields = (props) => (
 				text="Tipo de Muestra"
 				className="col s6"
 				autoFocus={true}
-				icon="account_circle"
+				icon="library_books"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -40,7 +40,7 @@ const Fields = (props) => (
 				name="CantidadMuestra"
 				text="Cantidad de Muestra"
 				className="col s6"
-				icon="fingerprint"
+				icon="sort"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -49,7 +49,7 @@ const Fields = (props) => (
 				name="Lote"
 				text="Lote"
 				className="col s6"
-				icon="fingerprint"
+				icon="line_style"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -58,7 +58,7 @@ const Fields = (props) => (
 				name="FechaFabricacion"
 				text="Fecha de Fabricacion"
 				className="col s6"
-				icon="fingerprint"
+				icon="event"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -67,7 +67,7 @@ const Fields = (props) => (
 				name="FechaVencimiento"
 				text="Fecha de Vencimineto"
 				className="col s6"
-				icon="fingerprint"
+				icon="event_busy"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -76,7 +76,7 @@ const Fields = (props) => (
 				name="TipoEnvaEmpa"
 				text="Tipo de Envase-Empaque"
 				className="col s6"
-				icon="fingerprint"
+				icon="inbox"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -85,7 +85,7 @@ const Fields = (props) => (
 				name="Color"
 				text="Color"
 				className="col s6"
-				icon="fingerprint"
+				icon="format_color_fill"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -94,7 +94,7 @@ const Fields = (props) => (
 				name="Olor"
 				text="Olor"
 				className="col s6"
-				icon="fingerprint"
+				icon="record_voice_over"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -103,7 +103,7 @@ const Fields = (props) => (
 				name="Aspecto"
 				text="Aspecto"
 				className="col s6"
-				icon="fingerprint"
+				icon="receipt"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -112,7 +112,7 @@ const Fields = (props) => (
 				name="CaracOrganolepticas"
 				text="Características Organolépticas"
 				className="col s6"
-				icon="fingerprint"
+				icon="gradient"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -121,7 +121,7 @@ const Fields = (props) => (
 				name="CondicionesLlegada"
 				text="Condiciones de Llegada al laboratorio Temperatura ºC"
 				className="col s12"
-				icon="fingerprint"
+				icon="done"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>

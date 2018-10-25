@@ -15,7 +15,7 @@ const Fields = (props) => (
 				text="Codigo"
 				className="col s4"
 				autoFocus={true}
-				icon="account_circle"
+				icon="line_style"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -24,7 +24,7 @@ const Fields = (props) => (
 				name="version"
 				text="Version"
 				className="col s4"
-				icon="perm_identity"
+				icon="cloud_done"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -33,7 +33,7 @@ const Fields = (props) => (
 				name="referencia"
 				text="Referencia"
 				className="col s4"
-				icon="fingerprint"
+				icon="mood"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -42,7 +42,7 @@ const Fields = (props) => (
 				name="analista"
 				text="Analista"
 				className="col s6"
-				icon="fingerprint"
+				icon="person"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -51,7 +51,7 @@ const Fields = (props) => (
 				name="coordinador"
 				text="Coordinador"
 				className="col s6"
-				icon="fingerprint"
+				icon="person"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>

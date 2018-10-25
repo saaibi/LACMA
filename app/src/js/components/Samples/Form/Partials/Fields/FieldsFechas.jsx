@@ -17,7 +17,7 @@ const Fields = (props) => (
 				text="Fecha y Hora de Recibo"
 				className="col s6"
 				autoFocus={true}
-				icon="account_circle"
+				icon="event_note"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -26,7 +26,7 @@ const Fields = (props) => (
 				name="FechaInicioAnalisis"
 				text="Fecha y Hora Inicio Análisis"
 				className="col s6"
-				icon="perm_identity"
+				icon="event_busy"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -35,7 +35,7 @@ const Fields = (props) => (
 				name="FechaFinalAnalisis"
 				text="Fecha y Hora Final de Analisis"
 				className="col s6"
-				icon="fingerprint"
+				icon="event_available"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -44,7 +44,7 @@ const Fields = (props) => (
 				name="FechaElabInforme"
 				text="Fecha Elaboración de Informe"
 				className="col s6"
-				icon="fingerprint"
+				icon="date_range"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -53,7 +53,7 @@ const Fields = (props) => (
 				name="FechaPactadaEntrega"
 				text="Fecha Pactada de Entrega"
 				className="col s6"
-				icon="fingerprint"
+				icon="insert_invitation"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -62,7 +62,7 @@ const Fields = (props) => (
 				name="FechaEntrega"
 				text="Fecha de Entrega"
 				className="col s6"
-				icon="fingerprint"
+				icon="event_available"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>
@@ -71,7 +71,7 @@ const Fields = (props) => (
 				name="FechaToma"
 				text="Fecha y Hora de Toma"
 				className="col s6"
-				icon="fingerprint"
+				icon="event_note"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>

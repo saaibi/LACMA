@@ -12,7 +12,7 @@ const SelectProduct = (props) => (
 				text="Product"
 				className="col s12"
 				autoFocus={true}
-				icon="account_circle"
+				icon="card_giftcard"
 				classNameIcon="prefix"
 				onChange={props.loadSample}
 			/>

@@ -39,7 +39,7 @@ const Fields = (props) => (
 			id="direccion"
 			name="Direccion"
 			text="Direccion"
-			icon="fingerprint"
+			icon="gps_fixed"
 			classNameIcon="prefix"
 			onChange={props.loadUsers}
 		/>
@@ -47,7 +47,7 @@ const Fields = (props) => (
 			id="celular"
 			name="Celular"
 			text="Celular"
-			icon="fingerprint"
+			icon="contact_phone"
 			classNameIcon="prefix"
 			onChange={props.loadUsers}
 		/>
@@ -56,7 +56,7 @@ const Fields = (props) => (
 			name="Email"
 			type="email"
 			text="Email"
-			icon="fingerprint"
+			icon="email"
 			classNameIcon="prefix"
 			onChange={props.loadUsers}
 		/>
