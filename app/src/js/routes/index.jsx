@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Router, Route } from "react-router-dom";
 import { connect } from "react-redux";
 
+import Header from "../components/AppHeader/Header";
+
 import { history } from "../store";
 import { AppClient } from "../components/Clients/RoutComp";
 import { AppSample } from "../components/Samples/RoutComp";
@@ -14,6 +16,7 @@ const Routes = () => {
     <div>
       <Router history={history}>
         <div>
+          <Header />
           <Route path="/clients" component={AppClient} />
           <Route path="/results" component={AppResult} />
           <Route path="/samples" component={AppSample} />
