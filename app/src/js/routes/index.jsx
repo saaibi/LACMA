@@ -7,6 +7,7 @@ import { AppClient } from "../components/Clients/RoutComp";
 import { AppSample } from "../components/Samples/RoutComp";
 import { AppResult } from "../components/Results/RoutComp";
 import { AppProducts } from "../components/Products/RoutComp";
+import { AppUsers } from "../components/Users/RoutComp";
 
 const Routes = () => {
   return (
@@ -17,6 +18,7 @@ const Routes = () => {
           <Route path="/results" component={AppResult} />
           <Route path="/samples" component={AppSample} />
           <Route path="/products" component={AppProducts} />
+          <Route path="/users" component={AppUsers} />
         </div>
       </Router>
     </div>
