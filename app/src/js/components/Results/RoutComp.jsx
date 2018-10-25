@@ -7,7 +7,7 @@ class AppResult extends Component {
 	render() {
 		return (
 			<div className="container">
-				<AppHeader name="RESULTS" />
+				<AppHeader name="RESULTADOS" />
 			</div>
 		);
 	}
