@@ -19,10 +19,8 @@ class Sample extends Component {
 
     render() {
         return (
-            <div className="row">
-                <Form createSample={this.createSample} loadSample={this.loadSample} />
-            </div>
-        )
+            <Form createSample={this.createSample} loadSample={this.loadSample} />
+        );
     }
 }
 

@@ -6,7 +6,7 @@ import ActionBar from './Partials/ActionBar';
 
 const Form = (props) => (
 	<div className="row">
-		<Collapsibles />
+		<Collapsibles {...props}/>
 		<ActionBar createSample={props.createSample} />
 	</div>
 );
