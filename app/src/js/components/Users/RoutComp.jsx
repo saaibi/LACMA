@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
 
 import AppHeader from '../AppHeader';
 import Users from '.';
@@ -15,5 +14,4 @@ class AppUsers extends Component {
 	}
 }
 
-const connectedUsers = connect()(AppUsers);
-export { connectedUsers as AppUsers };
+export { AppUsers };

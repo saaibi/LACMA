@@ -1,5 +1,4 @@
-import React,{Component} from 'react';
-import { connect } from "react-redux";
+import React, { Component } from 'react';
 
 import AppHeader from '../AppHeader';
 import Client from '.';
@@ -15,5 +14,4 @@ class AppClient extends Component {
 	}
 }
 
-const connectedClients = connect()(AppClient);
-export { connectedClients as AppClient };
+export { AppClient };
