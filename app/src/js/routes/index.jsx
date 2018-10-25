@@ -4,7 +4,11 @@ import { connect } from "react-redux";
 
 import Header from "../components/AppHeader/Header";
 
+import { PrivateRoute } from "../helpers/PrivateRoute";
 import { history } from "../store";
+import { HomePage } from "../components/Home";
+import { AppRegister } from "../components/Authentication/Register";
+import { AppLogin } from "../components/Authentication/Login";
 import { AppClient } from "../components/Clients/RoutComp";
 import { AppSample } from "../components/Samples/RoutComp";
 import { AppResult } from "../components/Results/RoutComp";
@@ -17,6 +21,9 @@ const Routes = () => {
       <Router history={history}>
         <div>
           <Header />
+          <PrivateRoute exact path="/" component={HomePage} />
+          <Route path="/register" component={AppRegister} />
+          <Route path="/login" component={AppLogin} />
           <Route path="/clients" component={AppClient} />
           <Route path="/results" component={AppResult} />
           <Route path="/samples" component={AppSample} />

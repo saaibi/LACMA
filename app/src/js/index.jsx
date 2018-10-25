@@ -7,6 +7,10 @@ import { Provider } from 'react-redux';
 import App from "./App";
 import store from './store';
 
+// setup fake backend
+import { configureFakeBackend } from './helpers/fake-backend';
+configureFakeBackend();
+
 const AppLPA = () => (
 	<Provider store={store}>
 		<App />
