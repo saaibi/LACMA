@@ -3,8 +3,8 @@ import React from 'react';
 const Columns = () => (
 	<thead>
 		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
+			<th>Empresa Solicitante</th>
+			<th>Nit</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
