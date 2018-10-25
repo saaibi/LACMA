@@ -5,6 +5,7 @@ import CollapsibleItem from '../../../Common/Collapsible/CollapsibleItems';
 import FieldsInit from './Fields/FieldsInit';
 import FieldsFechas from './Fields/FieldsFechas';
 import FieldsDetails from './Fields/FieldsDetails';
+import SelectProduct from './Fields/SelectProduct';
 
 const Collapsibles = (props) => {
     return (
@@ -23,6 +24,11 @@ const Collapsibles = (props) => {
                 header="Detail"
                 icon='credit_card'
                 content={<FieldsDetails loadSample={props.loadSample} />}
+            />
+            <CollapsibleItem
+                header="Selección de Producto"
+                icon='credit_card'
+                content={<SelectProduct loadSample={props.loadSample} />}
             />
             <CollapsibleItem
                 header="Datos y Cálculos "
