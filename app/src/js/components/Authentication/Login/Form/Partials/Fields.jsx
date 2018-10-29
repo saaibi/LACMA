@@ -10,7 +10,7 @@ const Fields = (props) => (
 			name="email"
 			text="Email"
 			type="email"
-			className="col s6"
+			className="col s6 offset-s3"
 			icon="email"
 			classNameIcon="prefix"
 			onChange={props.handleChange}
@@ -20,7 +20,7 @@ const Fields = (props) => (
 			name="password"
 			text="Password"
 			type="password"
-			className="col s6"
+			className="col s6 offset-s3"
 			autoFocus={true}
 			icon="fingerprint"
 			classNameIcon="prefix"
