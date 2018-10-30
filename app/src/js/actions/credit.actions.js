@@ -1,6 +1,6 @@
 import findIndex from 'lodash/findIndex'
 import { makeRequestAsync } from '../services'
-import { CREDIT_GET, CREDIT_GETBYID, CREDIT_UPDATE } from '../constants/credit.contans';
+import { CREDIT_GET, CREDIT_GETBYID, CREDIT_UPDATE } from '../constants/credit.constans';
 
 
 const updateCredit = (client_id, creditUpdate) => {
