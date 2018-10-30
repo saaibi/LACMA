@@ -20,7 +20,7 @@ const Routes = () => {
     <div>
       <Router history={history}>
         <div>
-          <Header />
+          <Header name="LACMA" />
           <PrivateRoute exact path="/" component={HomePage} />
           <Route path="/register" component={AppRegister} />
           <Route path="/login" component={AppLogin} />

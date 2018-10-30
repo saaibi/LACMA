@@ -24,12 +24,12 @@ class AppLogin extends Component {
         const { dispatch } = this.props;
         if (email && password) {
             const user = {
-                firstName: 'Saaibi ',
-                lastName: 'Florez',
-                username: 'yesid',
+                firstName: 'admin ',
+                lastName: 'admin',
+                username: 'admin',
                 password: '123456'
             };
-            dispatch(userActions.register(user));
+            // dispatch(userActions.register(user));
             dispatch(userActions.login(email, password));
         }
     }
