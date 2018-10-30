@@ -11,7 +11,6 @@ const login = (username, password) => {
 
     return dispatch => {
         dispatch(request({ username }));
-
         userService.login(username, password)
             .then(
                 user => {
@@ -20,7 +19,6 @@ const login = (username, password) => {
                 },
                 error => {
                     dispatch(failure(error));
-
                 }
             );
     };
@@ -45,11 +43,9 @@ const register = (user) => {
                 user => {
                     dispatch(success());
                     history.push('/login');
-
                 },
                 error => {
                     dispatch(failure(error));
-
                 }
             );
     };

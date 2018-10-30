@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import Form from './Form';
 import AppHeader from '../../AppHeader';
 
+import { userActions } from "../../../actions/user.actions";
+
 class AppLogin extends Component {
     state = {
         username: '',
@@ -21,12 +23,19 @@ class AppLogin extends Component {
         const { email, password } = this.state;
         const { dispatch } = this.props;
         if (email && password) {
+            const user = {
+                firstName: 'Saaibi ',
+                lastName: 'Florez',
+                username: 'yesid',
+                password: '123456'
+            };
+            dispatch(userActions.register(user));
             dispatch(userActions.login(email, password));
         }
     }
 
     componentWillMount() {
-        // this.props.dispatch(userActions.logout());
+        this.props.dispatch(userActions.logout());
     }
     render() {
         const { loggingIn } = this.props;
@@ -40,8 +49,12 @@ class AppLogin extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({
-    loggingIn: state.authentication
-})
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+        loggingIn: state.authentication,
+        registering: state.authentication
+    };
+};
 const connectedAppLogin = connect(mapStateToProps)(AppLogin);
 export { connectedAppLogin as AppLogin }; 
