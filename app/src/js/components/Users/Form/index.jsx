@@ -1,6 +1,5 @@
 import React from 'react';
 
-import LabelUpdate from './Partials/LabelUpdate';
 import Fields from './Partials/Fields';
 import ActionBar from './Partials/ActionBar';
 
