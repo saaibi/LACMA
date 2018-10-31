@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const autoprefixer = require("autoprefixer")()
 
 // > Root App
 const APP_FOLDER = path.resolve(__dirname, './app');
@@ -52,7 +53,7 @@ module.exports = (env, options) => {
                             loader: "postcss-loader",
                             options: {
                                 plugins: [
-                                    require("autoprefixer")()
+                                    autoprefixer
                                 ],
                                 sourceMap: isDevMode
                             }
