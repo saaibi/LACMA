@@ -7,7 +7,7 @@ class AppClient extends Component {
 	render() {
 		return (
 			<div className="container">
-				<AppHeader name="CLIENTS" />
+				<AppHeader name="ClIENTES" />
 				<Client />
 			</div>
 		);
