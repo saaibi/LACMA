@@ -29,7 +29,7 @@ class AppLogin extends Component {
                 username: 'admin',
                 password: '123456'
             };
-            // dispatch(userActions.register(user));
+            dispatch(userActions.register(user));
             dispatch(userActions.login(email, password));
         }
     }
