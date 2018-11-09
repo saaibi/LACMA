@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Test LACMA",
   "main": "index.js",
+  "engines": {
+    "npm": "5.7.1",
+    "node": "9.5.0"
+  },
   "scripts": {
     "build": "./node_modules/.bin/webpack --mode production",
     "prod": "set NODE_ENV=production && npm run build",
@@ -11,7 +15,8 @@
     "server": "nodemon server/index.js",
     "server-dev": "concurrently --kill-others \"npm run server\" \"npm run dev\"",
     "webpack": "webpack --mode development --watch",
-    "test": "mocha server/test/"
+    "test": "mocha server/test/",
+    "postinstall": "npm run prod"
   },
   "repository": {
     "type": "git",
