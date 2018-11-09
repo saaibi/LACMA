@@ -1,6 +1,8 @@
 import { LOGIN, REGISTER, LOGOUT } from '../constants/user.constans';
 
 let user = JSON.parse(localStorage.getItem('user'));
+let users = JSON.parse(localStorage.getItem('users')) || [];
+
 const initialState = user ? { loggedIn: true, user } : {};
 
 export function authentication(state = initialState, action) {
@@ -22,6 +24,8 @@ export function authentication(state = initialState, action) {
         loggedIn: true,
         user: action.user
       };
+    case LOGOUT.SUCCESS:
+      return { loggingIn: false };
     default:
       return state
   }

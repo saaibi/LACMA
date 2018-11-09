@@ -24,11 +24,11 @@ const Routes = () => {
           <PrivateRoute exact path="/" component={HomePage} />
           <Route path="/register" component={AppRegister} />
           <Route path="/login" component={AppLogin} />
-          <Route path="/clients" component={AppClient} />
-          <Route path="/results" component={AppResult} />
-          <Route path="/samples" component={AppSample} />
-          <Route path="/products" component={AppProducts} />
-          <Route path="/users" component={AppUsers} />
+          <PrivateRoute path="/clients" component={AppClient} />
+          <PrivateRoute path="/results" component={AppResult} />
+          <PrivateRoute path="/samples" component={AppSample} />
+          <PrivateRoute path="/products" component={AppProducts} />
+          <PrivateRoute path="/users" component={AppUsers} />
         </div>
       </Router>
     </div>

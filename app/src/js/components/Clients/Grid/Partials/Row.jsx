@@ -60,4 +60,4 @@ const mapStateToProps = (state) => ({
 	svgArr: state.client.clients[0].credit
 });
 
-export default connect(mapStateToProps)(Row);
+export default connect()(Row);

@@ -1,4 +1,4 @@
-import { authHeader } from '../helpers/auth-header';
+import { authHeader } from '../utils/auth-header';
 
 
 function login(username, password) {

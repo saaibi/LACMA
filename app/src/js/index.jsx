@@ -8,7 +8,7 @@ import App from "./App";
 import store from './store';
 
 // setup fake backend
-import { configureFakeBackend } from './helpers/fake-backend';
+import { configureFakeBackend } from './utils/fake-backend';
 configureFakeBackend();
 
 const AppLPA = () => (

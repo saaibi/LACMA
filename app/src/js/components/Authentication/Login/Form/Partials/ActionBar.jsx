@@ -10,7 +10,7 @@ const ActionBar = (props) => (
 			<div className="input-field col s4 offset-s2">
 				<Save
 					className="waves-effect waves-light blue lighten-1 btn"
-					texto="Guardar"
+					texto="Login"
 					icon="send"
 					classNameIcon="right"
 					onClick={props.handleSubmit}
