@@ -1,37 +1,49 @@
 import React from 'react';
 
-import Empresa from '../../../../Common/Input';
-import Nit from '../../../../Common/Input';
-import Contacto from '../../../../Common/Input';
-import Direccion from '../../../../Common/Input';
-import Fax from '../../../../Common/Input';
+import FirtsName from '../../../../Common/Input';
+import LastName from '../../../../Common/Input';
+import UserName from '../../../../Common/Input';
+import Password from '../../../../Common/Input';
 import Email from '../../../../Common/Input';
+import Phone from '../../../../Common/Input';
+import User_id from '../../../../Common/Input';
 
 const Fields = (props) => (
 	<div>
-		<Empresa
+		<FirtsName
 			id="firts_name"
 			name="firstName"
-			text="Empresa Solicitante"
+			text="Firts Name"
 			autoFocus={true}
-			icon="closed_caption"
+			icon="account_circle"
 			classNameIcon="prefix"
 			onChange={props.handleChange}
 		/>
-	
-		<Nit
+
+		<LastName
 			id="last_name"
 			name="lastName"
-			text="Nit"
-			icon="fingerprint"
+			text="Last Name"
+			icon="assignment_ind"
 			classNameIcon="prefix"
 			onChange={props.handleChange}
 		/>
-		<Contacto
-			id="client_id"
-			name="client_id"
-			text="Contacto"
-			icon="perm_contact_calendar"
+
+		<UserName
+			id="username"
+			name="username"
+			text="Username"
+			icon="people"
+			classNameIcon="prefix"
+			onChange={props.handleChange}
+		/>
+
+		<Password
+			id="password"
+			name="password"
+			text="Password"
+			type="password"
+			icon="vpn_key"
 			classNameIcon="prefix"
 			onChange={props.handleChange}
 		/>
@@ -40,6 +52,26 @@ const Fields = (props) => (
 			name="email"
 			text="Email"
 			icon="email"
+			classNameIcon="prefix"
+			onChange={props.handleChange}
+		/>
+
+		<Phone
+			id="phone"
+			name="phone"
+			text="Phone"
+			type="number"
+			icon="call"
+			classNameIcon="prefix"
+			onChange={props.handleChange}
+		/>
+		
+		<User_id
+			id="user_id"
+			name="user_id"
+			text="ID"
+			type="number"
+			icon="fingerprint"
 			classNameIcon="prefix"
 			onChange={props.handleChange}
 		/>

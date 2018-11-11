@@ -1,28 +1,22 @@
 import { USERS_GETALL, USERS_DELETE } from '../constants/user.constans';
 
-export function users(state = {}, action) {
-  switch (action.type) {
+const initialState = {
+  users: [],
+  user: '',
+  isLoading: false,
+  error: '',
+};
+
+export function users(state = initialState, action) {
+  const { type, payload } = action;
+  switch (type) {
     case USERS_GETALL.REQUEST:
-      return {
-        loading: true
-      };
     case USERS_GETALL.SUCCESS:
-      return {
-        items: action.users
-      };
     case USERS_GETALL.FAILURE:
       return {
-        error: action.error
-      };
-    case USERS_GETALL.REQUEST:
-      return {
         ...state,
-        items: state.items.map(user =>
-          user.id === action.id
-            ? { ...user, deleting: true }
-            : user
-        )
-      };
+        ...payload,
+      }
     case USERS_DELETE.SUCCESS:
       return {
         items: state.items.filter(user => user.id !== action.id)

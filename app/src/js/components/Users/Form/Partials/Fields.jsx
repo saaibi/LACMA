@@ -1,62 +1,77 @@
 import React from 'react';
 
-import Nombre from '../../../Common/Input';
-import Apellido from '../../../Common/Input';
-import Cedula from '../../../Common/Input';
-import Direccion from '../../../Common/Input';
-import Celular from '../../../Common/Input';
+import FirtsName from '../../../Common/Input';
+import LastName from '../../../Common/Input';
+import UserName from '../../../Common/Input';
+import Password from '../../../Common/Input';
 import Email from '../../../Common/Input';
+import Phone from '../../../Common/Input';
+import User_id from '../../../Common/Input';
 
 const Fields = (props) => (
 	<div>
-		<Nombre
-			id="nombre"
-			name="Nombre"
-			text="Nombre"
+		<FirtsName
+			id="firts_name"
+			name="firstName"
+			text="Firts Name"
 			autoFocus={true}
 			icon="account_circle"
 			classNameIcon="prefix"
 			onChange={props.loadUsers}
 		/>
 
-		<Apellido
-			id="apellido"
-			name="Apellido"
-			text="Apellido"
-			icon="perm_identity"
+		<LastName
+			id="last_name"
+			name="lastName"
+			text="Last Name"
+			icon="assignment_ind"
 			classNameIcon="prefix"
 			onChange={props.loadUsers}
 		/>
-		<Cedula
-			id="cedula"
-			name="Cedula"
-			text="Cedula"
-			icon="fingerprint"
+
+		<UserName
+			id="username"
+			name="username"
+			text="Username"
+			icon="people"
 			classNameIcon="prefix"
 			onChange={props.loadUsers}
 		/>
-		<Direccion
-			id="direccion"
-			name="Direccion"
-			text="Direccion"
-			icon="gps_fixed"
-			classNameIcon="prefix"
-			onChange={props.loadUsers}
-		/>
-		<Celular
-			id="celular"
-			name="Celular"
-			text="Celular"
-			icon="contact_phone"
+
+		<Password
+			id="password"
+			name="password"
+			text="Password"
+			type="password"
+			icon="vpn_key"
 			classNameIcon="prefix"
 			onChange={props.loadUsers}
 		/>
 		<Email
 			id="email"
-			name="Email"
-			type="email"
+			name="email"
 			text="Email"
 			icon="email"
+			classNameIcon="prefix"
+			onChange={props.loadUsers}
+		/>
+
+		<Phone
+			id="phone"
+			name="phone"
+			text="Phone"
+			type="number"
+			icon="call"
+			classNameIcon="prefix"
+			onChange={props.loadUsers}
+		/>
+		
+		<User_id
+			id="user_id"
+			name="user_id"
+			text="ID"
+			type="number"
+			icon="fingerprint"
 			classNameIcon="prefix"
 			onChange={props.loadUsers}
 		/>

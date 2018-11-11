@@ -16,16 +16,6 @@ const ActionBar = (props) => (
 					onClick={props.handleSubmit}
 				/>
 			</div>
-			<div className="input-field col s4 offset-s1">
-				<Link to="/users">
-					<Register
-						className="waves-effect waves-light blue lighten-1 btn"
-						texto="Registro"
-						icon="assignment"
-						classNameIcon="right"
-					/>
-				</Link>
-			</div>
 		</div>
 	</div>
 );

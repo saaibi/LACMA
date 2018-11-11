@@ -6,26 +6,31 @@ let users = JSON.parse(localStorage.getItem('users')) || [];
 const initialState = user ? { loggedIn: true, user } : {};
 
 export function authentication(state = initialState, action) {
-  switch (action.type) {
+  const { type, user } = action;
+  switch (type) {
     case REGISTER.SUCCESS:
     case REGISTER.FAILURE:
     case LOGIN.FAILURE:
     case LOGOUT.REQUEST:
       return {};
     case REGISTER.REQUEST:
-      return { registering: true };
+      return {
+        registering: true
+      };
     case LOGIN.REQUEST:
       return {
         loggingIn: true,
-        user: action.user
+        user: user
       };
     case LOGIN.SUCCESS:
       return {
         loggedIn: true,
-        user: action.user
+        user: user
       };
     case LOGOUT.SUCCESS:
-      return { loggingIn: false };
+      return {
+        loggingIn: false
+      };
     default:
       return state
   }

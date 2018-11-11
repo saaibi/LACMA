@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { clientActions } from "../../actions/client.actions";
+import { userActions } from "../../actions/user.actions";
 
 import Form from './Form';
 import Grid from './Grid';
@@ -10,26 +10,44 @@ import Modal from '../Common/Modal';
 import Progress from '../Common/Utils/Progress';
 
 class Users extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	state = {
-
+		user: {
+			firstName: '',
+			lastName: '',
+			username: '',
+			password: '',
+			phone: '',
+			email: '',
+			user_id: '',
+		},
+		submitted: false
 	}
+
+	componentWillMount() {
+		this.props.dispatch(userActions.getAllUsers());
+	}
+
 	createUsers = (e) => {
-		console.log("create Product")
+		e.preventDefault();
+		this.props.dispatch(userActions.register(this.state.user));
+	}
+
+	loadUsers = (e) => {
+		const { user } = this.state;
+		const { name, value } = e.target;
+		this.setState({
+			user: {
+				...user,
+				[name]: value
+			}
+		})
 	}
 
 	updateUsers = (e) => {
 
 	}
 
-	loadUsers = (event) => {
-		console.log("load Product")
-	}
-
-	loadUsersEdit = (event) => {
+	loadUsersEdit = (e) => {
 
 	}
 
@@ -40,26 +58,21 @@ class Users extends Component {
 	render() {
 		const { users } = this.props;
 		const { contentModal, clientEdit } = this.state;
-		{/* 
-		if (product.isLoading) {
-			if (!product.product) {
+		if (users.isLoading) {
+			if (users.users) {
 				return (
 					<Progress type="circle" />
 				)
 			}
 		}
 
-		let content = contentModal == "edit" ? content =
-			<Edit client={clientEdit} updateUsers={this.updateUsers} loadUsers={this.loadProductEdit} /> : content =
-			<View client={product} />;
-		*/}
 		return (
 			<div className="row">
 				<div className="col s12 m4 l3">
 					<Form createUsers={this.createUsers} loadUsers={this.loadUsers} />
 				</div>
 				<div className="col s12 m8 l9">
-					<Grid users={users} optionsUsers={this.optionsUsers} />
+					<Grid users={users.users} optionsUsers={this.optionsUsers} />
 				</div>
 			</div>
 		);
@@ -67,6 +80,7 @@ class Users extends Component {
 }
 
 const mapStateToProps = (state) => ({
+	users: state.users
 });
 
 export default connect(mapStateToProps)(Users);

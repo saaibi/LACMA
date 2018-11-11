@@ -6,7 +6,6 @@ const Columns = () => (
 			<th>Nombre</th>
 			<th>Apellido</th>
 			<th>Cedula</th>
-			<th>Dirección</th>
 			<th>Celular</th>
 			<th>Email</th>
 			<th>Actions</th>

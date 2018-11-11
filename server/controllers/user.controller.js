@@ -33,13 +33,13 @@ userController.createUser = async (req, res) => {
 
 userController.login = async (req, res) => {
     const { username, password } = req.body;
-
     await User.findOne({ username, password }, (err, user) => {
         if (err) return res.json({ error: err });
         if (user)
             res.json({ status: "User Logged", user });
         else
-           throw res.json({ status: "Username or password is incorrect" });
+            res.status(500).send('Email or password is incorrect!');
+        //    throw res.json({ status: "Email or password is incorrect" });
     });
 
 };
