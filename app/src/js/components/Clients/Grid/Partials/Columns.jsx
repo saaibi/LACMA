@@ -5,6 +5,8 @@ const Columns = () => (
 		<tr>
 			<th>Empresa Solicitante</th>
 			<th>Nit</th>
+			<th>Contact</th>
+			<th>Email</th>
 			<th>Actions</th>
 		</tr>
 	</thead>

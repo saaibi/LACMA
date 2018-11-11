@@ -3,10 +3,10 @@ const { Schema } = mongoose;
 
 // Create Schema
 const ClientSchema = new Schema({
-    firstName: { type: String, required: true },
-    lastName: { type: String, required: true },
-    client_id: { type: String, required: true },
-    credit: { type: Schema.Types.ObjectId, ref: 'Credit' }
+    company: { type: String, required: true },
+    nit: { type: String, required: true },
+    contact: { type: String, required: true },
+    email: { type: String, required: true }
 },
     {
         versionKey: false,

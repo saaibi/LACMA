@@ -17,13 +17,14 @@ class Client extends Component {
 
 	state = {
 		client: {
-			firstName: "",
-			lastName: "",
-			client_id: "",
+			company: "",
+			nit: "",
+			contact: "",
+			email: "",
 		},
 		clientEdit: {
-			firstName: '',
-			lastName: '',
+			company: '',
+			contact: '',
 		},
 		client_id: "",
 		headerModal: "",
@@ -36,8 +37,8 @@ class Client extends Component {
 
 	componentWillReceiveProps(newProps) {
 		const { clientEdit } = this.state;
-		clientEdit.firstName = newProps.client.firstName;
-		clientEdit.lastName = newProps.client.lastName;
+		clientEdit.company = newProps.client.company;
+		clientEdit.contact = newProps.client.contact;
 		this.setState({ clientEdit });
 	}
 

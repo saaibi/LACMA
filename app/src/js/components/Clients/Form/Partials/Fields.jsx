@@ -10,8 +10,8 @@ import Email from '../../../Common/Input';
 const Fields = (props) => (
 	<div>
 		<Empresa
-			id="firts_name"
-			name="firstName"
+			id="company"
+			name="company"
 			text="Empresa Solicitante"
 			autoFocus={true}
 			icon="closed_caption"
@@ -20,16 +20,16 @@ const Fields = (props) => (
 		/>
 	
 		<Nit
-			id="last_name"
-			name="lastName"
+			id="nit"
+			name="nit"
 			text="Nit"
 			icon="fingerprint"
 			classNameIcon="prefix"
 			onChange={props.loadClient}
 		/>
 		<Contacto
-			id="client_id"
-			name="client_id"
+			id="contact"
+			name="contact"
 			text="Contacto"
 			icon="perm_contact_calendar"
 			classNameIcon="prefix"

@@ -8,11 +8,11 @@ const ICONS = { floating: "add", activatorReveal: "more_vert", closeReveal: "clo
 
 const Card = (props) => (
     <Cards
-        cardTitle={`${props.client.firstName} ${props.client.lastName}`}
+        cardTitle={`${props.client.company}`}
         classNameImage=" waves-effect waves-block waves-light"
         cardContent={<Collapsibles {...props} />}
         cardContentReveal={<Pay {...props} />}
-        cardContentIcon={props.client.firstName}
+        cardContentIcon={props.client.company}
         cardTitleReleveal="Details Client"
         icons={ICONS}
         cardImage

@@ -40,8 +40,10 @@ class Row extends Component {
 		const { client } = this.props;
 		return (
 			<tr>
-				<td>{client.firstName}</td>
-				<td>{client.lastName}</td>
+				<td>{client.company}</td>
+				<td>{client.nit}</td>
+				<td>{client.contact}</td>
+				<td>{client.email}</td>
 				<td>
 					<ActionBarGrid
 						id={client._id}
@@ -57,7 +59,7 @@ class Row extends Component {
 };
 
 const mapStateToProps = (state) => ({
-	svgArr: state.client.clients[0].credit
+	// svgArr: state.client.clients[0].credit
 });
 
 export default connect()(Row);

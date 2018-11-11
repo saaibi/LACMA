@@ -6,9 +6,9 @@ import LastsName from '../../../Common/Input';
 const Fields = (props) => (
 	<div>
 		<FirtsName
-			id="firts_name"
-            name="firstName"
-            value={props.client.firstName ? props.client.firstName: "" }
+			id="company"
+            name="company"
+            value={props.client.company ? props.client.company: "" }
 			text="Firts Name"
 			autoFocus={true}
 			icon="account_circle"
@@ -17,9 +17,9 @@ const Fields = (props) => (
 		/>
 	
 		<LastsName
-			id="last_name"
-            name="lastName"
-            value={props.client.lastName ? props.client.lastName: ""}
+			id="contact"
+            name="contact"
+            value={props.client.contact ? props.client.contact: ""}
 			text="Last Name"
 			icon="perm_identity"
 			classNameIcon="prefix"

@@ -118,8 +118,6 @@ const getByIdCredit = (id) => {
     };
 };
 
-
-
 const createClient = (clientCreate) => {
     const request = () => ({
         type: CLIENT_CREATE.REQUEST,
@@ -195,9 +193,9 @@ const updateClient = (client_id, clientEdit) => {
 
             if (index === -1) return dispatch(failure("Client Not found"));
 
-            const clientUpdate = { firstName : clientEdit.firstName, lastName : clientEdit.lastName };
+            const clientUpdate = { company : clientEdit.company, contact : clientEdit.contact };
             const client = await makeRequestAsync(`/clients/${client_id}/client`, "PUT", clientUpdate);
-            console.log(client)
+
             dispatch(success(index, client.data.client));
             M.toast({html: `${client.data.status}`, classes: 'rounded'});
         } catch (error) {
