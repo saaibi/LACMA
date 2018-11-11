@@ -27,9 +27,4 @@ class Sample extends Component {
 const mapStateToProps = (state) => ({
 
 })
-
-const mapDispatchToProps = {
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Sample)
+export default connect(mapStateToProps)(Sample)

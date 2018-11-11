@@ -1,4 +1,4 @@
-const Client = require("../models/clients");
+const Client = require("../models/client");
 
 const clientController = {};
 
@@ -53,7 +53,6 @@ clientController.deleteClient = async (req, res) => {
         const message = error.message || error;
         res.json({ error: message });
     }
-
 };
 
 module.exports = clientController;

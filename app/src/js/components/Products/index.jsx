@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { clientActions } from "../../actions/client.actions";
+import { productActions } from "../../actions/product.actions";
 
 import Form from './Form';
 import Grid from './Grid';
@@ -15,21 +15,42 @@ class Product extends Component {
 	}
 
 	state = {
-
+		product: {
+			name: '',
+			area: '',
+			parameter: '',
+			result: '',
+			limitMin: '',
+			limitMax: '',
+			method: '',
+		}
 	}
+
+	componentWillMount() {
+		this.props.dispatch(productActions.getAllProduct());
+	}
+
 	createProduct = (e) => {
-		console.log("create Product")
+		e.preventDefault();
+		this.props.dispatch(productActions.createProduct(this.state.product));
 	}
 
 	updateProduct = (e) => {
 
 	}
 
-	loadProduct = (event) => {
-		console.log("load Product")
+	loadProduct = (e) => {
+		const { product } = this.state;
+		const { name, value } = e.target;
+		this.setState({
+			product: {
+				...product,
+				[name]: value
+			}
+		})
 	}
 
-	loadProductEdit = (event) => {
+	loadProductEdit = (s) => {
 
 	}
 
@@ -38,28 +59,27 @@ class Product extends Component {
 	}
 
 	render() {
-		const { product } = this.props;
+		const { products } = this.props;
 		const { contentModal, clientEdit } = this.state;
-		{/* 
-		if (product.isLoading) {
-			if (!product.product) {
+		if (products.isLoading) {
+			if (!products.products) {
 				return (
 					<Progress type="circle" />
 				)
 			}
 		}
 
-		let content = contentModal == "edit" ? content =
-			<Edit client={clientEdit} updateProduct={this.updateProduct} loadProduct={this.loadProductEdit} /> : content =
-			<View client={product} />;
-		*/}
+		// let content = contentModal == "edit" ? content =
+		// 	<Edit client={clientEdit} updateProduct={this.updateProduct} loadProduct={this.loadProductEdit} /> : content =
+		// 	<View client={product} />;
+
 		return (
 			<div className="row">
 				<div className="col s12 m4 l3">
 					<Form createProduct={this.createProduct} loadProduct={this.loadProduct} />
 				</div>
 				<div className="col s12 m8 l9">
-					<Grid product={product} optionsProduct={this.optionsProduct} />
+					<Grid product={products.products} optionsProduct={this.optionsProduct} />
 				</div>
 			</div>
 		);
@@ -67,6 +87,7 @@ class Product extends Component {
 }
 
 const mapStateToProps = (state) => ({
+	products: state.product
 });
 
 export default connect(mapStateToProps)(Product);

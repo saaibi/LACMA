@@ -18,7 +18,7 @@ app.use(morgan('dev'))
 
 // Routes
 app.use('/api/clients', require('./routes/clients.routes'));
-app.use('/api/credits', require('./routes/credit.routes'));
+app.use('/api/products', require('./routes/products.routes'));
 app.use('/api/samples', require('./routes/samples.routes'));
 app.use('/api/users', require('./routes/user.routes'));
 

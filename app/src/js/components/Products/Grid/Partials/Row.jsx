@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { clienActions, clientActions } from "../../../../actions/client.actions";
+import { productActions } from "../../../../actions/product.actions";
 
 import ActionBarGrid from './ActionBarGrid';
 
@@ -17,34 +17,39 @@ class Row extends Component {
 
 	onEdit = (id) => {
 		const data = {
-			headerModal: "Edit Client ",
+			headerModal: "Edit Product",
 			contentModal: "edit",
 			id: id,
 		};
-		this.props.optionsClient(data)
+		this.props.optionsProduct(data)
 	}
 
 	onDelete = (id) => {
-		this.props.dispatch(clientActions.deleteClient(id));
+		this.props.dispatch(productActions.deleteProduct(id));
 	}
 
 	onView = (id) => {
 		const data = {
-			headerModal: "View Client ",
+			headerModal: "View Product",
 			contentModal: "view",
 			id: id,
 		};
-		this.props.optionsClient(data)
+		this.props.optionsProduct(data)
 	}
 	render() {
-		const { client } = this.props;
+		const { product } = this.props;
 		return (
 			<tr>
-				<td>{client.firstName}</td>
-				<td>{client.lastName}</td>
+				<td>{product.name}</td>
+				<td>{product.area}</td>
+				<td>{product.parameter}</td>
+				<td>{product.result}</td>
+				<td>{product.limitMin}</td>
+				<td>{product.limitMax}</td>
+				<td>{product.method}</td>
 				<td>
 					<ActionBarGrid
-						id={client._id}
+						id={product._id}
 						onEdit={this.onEdit}
 						onDelete={this.onDelete}
 						onView={this.onView}
@@ -57,7 +62,7 @@ class Row extends Component {
 };
 
 const mapStateToProps = (state) => ({
-	svgArr: state.client.clients[0].credit
+	// svgArr: state.client.clients[0].credit
 });
 
-export default connect(mapStateToProps)(Row);
+export default connect()(Row);

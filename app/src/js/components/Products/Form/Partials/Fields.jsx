@@ -11,8 +11,8 @@ import Metodo from '../../../Common/Input';
 const Fields = (props) => (
 	<div>
 		<NombreProducto
-			id="nombre_producto"
-			name="NombreProducto"
+			id="name_product"
+			name="name"
 			text="Nombre Producto"
 			autoFocus={true}
 			icon="assignment_ind"
@@ -21,48 +21,48 @@ const Fields = (props) => (
 		/>
 
 		<Area
-			id="area"
-			name="Area"
+			id="area_product"
+			name="area"
 			text="Area"
 			icon="insert_drive_file"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
 		<Parametro
-			id="parametro"
-			name="Parametro"
+			id="parameter"
+			name="parameter"
 			text="Parametro"
 			icon="description"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
 		<Resultado
-			id="resultado"
-			name="Resultado"
+			id="result"
+			name="result"
 			text="Resultado"
 			icon="assessment"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
 		<LimiteMin
-			id="limite_min"
-			name="LimiteMin"
+			id="limit_min"
+			name="limitMin"
 			text="Limite Min"
 			icon="remove"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
 		<LimiteMax
-			id="limite_max"
-			name="LimiteMax"
+			id="limit_max"
+			name="limitMax"
 			text="Limite Max"
 			icon="add"
 			classNameIcon="prefix"
 			onChange={props.loadProduct}
 		/>
 		<Metodo
-			id="metodo"
-			name="Metodo"
+			id="method"
+			name="method"
 			text="Metodo"
 			icon="art_track"
 			classNameIcon="prefix"
