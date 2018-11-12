@@ -55,19 +55,16 @@ userController.updateUser = async (req, res) => {
 
 };
 
-userController.updateUserAccount = async (user_id, account) => {
-    await User.findByIdAndUpdate(user_id,
-        { "$push": { "accounts": account } },
-        { "new": true, "upsert": true }, (err, user) => {
-            if (err) throw err;
-            console.log("#########", user);
-        }
-    );
-};
-
-// Pending Review
 userController.deleteUser = async (req, res) => {
-
+    try {
+        await User.findByIdAndRemove(req.params.id, (err, product) => {
+            if (err) return res.json({ error: err });
+            res.json({ status: "User Removed" });
+        });
+    } catch (error) {
+        const message = error.message || error;
+        res.json({ error: message });
+    }
 };
 
 module.exports = userController;

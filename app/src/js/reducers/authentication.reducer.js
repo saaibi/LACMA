@@ -1,7 +1,7 @@
 import { LOGIN, REGISTER, LOGOUT } from '../constants/user.constans';
 
 let user = JSON.parse(localStorage.getItem('user'));
-let users = JSON.parse(localStorage.getItem('users')) || [];
+// let users = JSON.parse(localStorage.getItem('users')) || [];
 
 const initialState = user ? { loggedIn: true, user } : {};
 

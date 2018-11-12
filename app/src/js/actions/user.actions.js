@@ -1,3 +1,4 @@
+import findIndex from 'lodash/findIndex'
 import { REGISTER, LOGIN, LOGOUT, USERS_GETALL, USERS_DELETE } from '../constants/user.constans';
 import { userService } from '../services/user.service';
 import { history } from '../store';
@@ -90,6 +91,51 @@ const getAllUsers = () => {
     };
 }
 
+const deleteUser = (user_id) => {
+    const request = () => ({
+        type: USERS_DELETE.REQUEST,
+        payload: {
+            isLoading: true,
+            error: '',
+        },
+    });
+
+    const success = index => ({
+        type: USERS_DELETE.SUCCESS,
+        payload: {
+            index,
+            isLoading: false,
+            error: '',
+        },
+    });
+
+    const failure = error => ({
+        type: USERS_DELETE.FAILURE,
+        payload: {
+            isLoading: false,
+            error,
+        },
+    });
+
+    return async (dispatch, getState) => {
+        dispatch(request());
+        try {
+            const { users } = getState().users;
+            const index = findIndex(users, { _id: user_id });
+
+            if (index === -1) return dispatch(failure("User Not found"));
+
+            const product = await makeRequestAsync(`/users/${user_id}`, "DELETE");
+            dispatch(success(index));
+            M.toast({ html: `${product.data.status}`, classes: 'rounded' });
+        } catch (error) {
+            const message = error.message || error;
+            dispatch(failure(message));
+        }
+    };
+
+}
+
 const login2 = (username, password) => {
     const request = (user) => { return { type: LOGIN.REQUEST, user } }
     const success = (user) => { return { type: LOGIN.SUCCESS, user } }
@@ -137,31 +183,11 @@ const register2 = (user) => {
 
 
 
-const _delete = (id) => {
-    const request = (id) => { return { type: USERS_DELETE.REQUEST, id } }
-    const success = (id) => { return { type: USERS_DELETE.SUCCESS, id } }
-    const failure = (id, error) => { return { type: USERS_DELETE.FAILURE, id, error } }
-    return dispatch => {
-        dispatch(request(id));
-
-        userService.delete(id)
-            .then(
-                user => {
-                    dispatch(success(id));
-                },
-                error => {
-                    dispatch(failure(id, error));
-                }
-            );
-    };
-
-
-}
 
 export const userActions = {
     login,
     logout,
     register,
     getAllUsers,
-    delete: _delete
+    deleteUser
 };

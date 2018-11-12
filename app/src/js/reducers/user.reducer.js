@@ -1,4 +1,4 @@
-import { USERS_GETALL, USERS_DELETE } from '../constants/user.constans';
+import { USERS_GETALL, USERS_DELETE, REGISTER } from '../constants/user.constans';
 
 const initialState = {
   users: [],
@@ -13,25 +13,29 @@ export function users(state = initialState, action) {
     case USERS_GETALL.REQUEST:
     case USERS_GETALL.SUCCESS:
     case USERS_GETALL.FAILURE:
+    case USERS_DELETE.REQUEST:
+    case USERS_DELETE.FAILURE:
+    case REGISTER.REQUEST:
+    case REGISTER.FAILURE:
       return {
         ...state,
         ...payload,
       }
-    case USERS_DELETE.SUCCESS:
-      return {
-        items: state.items.filter(user => user.id !== action.id)
-      };
-    case USERS_DELETE.FAILURE:
+    case REGISTER.SUCCESS: {
+      const { user } = action;
       return {
         ...state,
-        items: state.items.map(user => {
-          if (user.id === action.id) {
-            const { deleting, ...userCopy } = user;
-            return { ...userCopy, deleteError: action.error };
-          }
-
-          return user;
-        })
+        users: [...state.users, user]
+      };
+    }
+    case USERS_DELETE.SUCCESS:
+      const { index } = payload;
+      return {
+        ...state,
+        users: [
+          ...state.users.slice(0, index),
+          ...state.users.slice(index + 1),
+        ],
       };
     default:
       return state

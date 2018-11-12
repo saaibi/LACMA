@@ -57,9 +57,8 @@ class Users extends Component {
 
 	render() {
 		const { users } = this.props;
-		const { contentModal, clientEdit } = this.state;
 		if (users.isLoading) {
-			if (users.users) {
+			if (!users.users) {
 				return (
 					<Progress type="circle" />
 				)
