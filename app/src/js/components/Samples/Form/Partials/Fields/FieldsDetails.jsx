@@ -57,19 +57,21 @@ const Fields = (props) => (
 				id="fecha_fabricacion"
 				name="FechaFabricacion"
 				text="Fecha de Fabricacion"
+				classNameInput="datepicker"
 				className="col s6"
 				icon="event"
 				classNameIcon="prefix"
-				onChange={props.loadSample}
+				onBlur={props.loadSample}
 			/>
 			<FechaVencimiento
 				id="fecha_vencimiento"
 				name="FechaVencimiento"
 				text="Fecha de Vencimineto"
+				classNameInput="datepicker"
 				className="col s6"
 				icon="event_busy"
 				classNameIcon="prefix"
-				onChange={props.loadSample}
+				onBlur={props.loadSample}
 			/>
 			<TipoEnvaEmpa
 				id="tipo_enva_empa"

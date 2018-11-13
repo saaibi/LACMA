@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import Icons from '../Icons';
 
-const Input = ({ id, name, value, text, type, autoFocus, className, classNameInput, classNameLabel, placeholder, onChange, icon, classNameIcon }) => {
+const Input = ({ id, name, value, text, type, autoFocus, className, classNameInput, classNameLabel, placeholder, onChange, onSelect, onBlur, icon, classNameIcon }) => {
+	let today = new Date().toISOString().split("T")[0];
 	return (
 		<div className={`input-field ${className}`}>
 			{icon && (<Icons
@@ -19,6 +20,8 @@ const Input = ({ id, name, value, text, type, autoFocus, className, classNameInp
 				className={classNameInput}
 				placeholder={placeholder}
 				onChange={onChange}
+				onSelect={onSelect}
+				onBlur={onBlur}
 			/>
 			<label htmlFor={id} className={classNameLabel}>{text}</label>
 		</div>

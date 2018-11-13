@@ -17,17 +17,41 @@
     <!-- <script src="dist/js/bundle.js"></script> -->
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.datepicker');
-            var instances = M.Datepicker.init(elems);
+            console.log(elems)
+            // var instances = M.Datepicker.init(elems);
         });
 
         $(document).ready(function () {
-            $('.datepicker').datepicker();
+            $('.datepicker').datepicker({
+                format: "dd/mm/yyyy",
+                autoClose: true,
+                disableWeekends: true,
+                showClearBtn: true,
+                setDefaultDate: true,
+                minDate: new Date('11/12/2018'),
+                maxDate: new Date('11/28/2018'),
+                defaultDate: new Date('11/25/2018'),
+                onOpen: () => {
+                    console.log("open")
+                },
+                onClose: () => {
+                    console.log("closee")
+                },
+                onDraw: () => {
+                    console.log("draw")
+                }
+            });
         });
-        
+
+        // var $input = $('.datepicker').datepicker()
+        // var picker = $input.datepicker('picker')
+        // picker.set('select', '2016-04-20', { format: 'yyyy-mm-dd' })
+
         $(document).ready(function () {
             $('.sidenav').sidenav({
                 edge: 'left',

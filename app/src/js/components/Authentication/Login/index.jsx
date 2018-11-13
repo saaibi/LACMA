@@ -30,6 +30,7 @@ class AppLogin extends Component {
     componentWillMount() {
         this.props.dispatch(userActions.logout());
     }
+    
     render() {
         const { loggingIn } = this.props;
         const { email, password, submitted } = this.state;
@@ -43,7 +44,6 @@ class AppLogin extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         loggingIn: state.authentication,
         registering: state.authentication

@@ -15,65 +15,71 @@ const Fields = (props) => (
 				id="fecha_recibo"
 				name="fechaRecibo"
 				text="Fecha y Hora de Recibo"
+				classNameInput="datepicker"
 				className="col s6"
-				autoFocus={true}
 				icon="event_note"
 				classNameIcon="prefix"
-				onChange={props.loadSample}
+				onBlur={props.loadDates}
 			/>
 			<FechaInicioAnalisis
-				id="Fecha_inicio_analisis"
-				name="FechaInicioAnalisis"
+				id="fecha_inicio_analisis"
+				name="fechaInicioAnalisis"
 				text="Fecha y Hora Inicio Análisis"
+				classNameInput="datepicker"
 				className="col s6"
 				icon="event_busy"
 				classNameIcon="prefix"
-				onChange={props.loadSample}
+				onBlur={props.loadDates}
 			/>
 			<FechaFinalAnalisis
-				id="Fecha_final_analisis"
-				name="FechaFinalAnalisis"
+				id="fecha_final_analisis"
+				name="fechaFinalAnalisis"
 				text="Fecha y Hora Final de Analisis"
+				classNameInput="datepicker"
 				className="col s6"
 				icon="event_available"
 				classNameIcon="prefix"
-				onChange={props.loadSample}
+				onBlur={props.loadDates}
 			/>
 			<FechaElabInforme
-				id="Fecha_elab_informe"
-				name="FechaElabInforme"
+				id="fecha_elab_informe"
+				name="fechaElabInforme"
 				text="Fecha Elaboración de Informe"
+				classNameInput="datepicker"
 				className="col s6"
 				icon="date_range"
 				classNameIcon="prefix"
-				onChange={props.loadSample}
+				onBlur={props.loadDates}
 			/>
 			<FechaPactadaEntrega
-				id="Fecha_pactada_entrega"
-				name="FechaPactadaEntrega"
+				id="fecha_pactada_entrega"
+				name="fechaPactadaEntrega"
 				text="Fecha Pactada de Entrega"
+				classNameInput="datepicker"
 				className="col s6"
 				icon="insert_invitation"
 				classNameIcon="prefix"
-				onChange={props.loadSample}
+				onBlur={props.loadDates}
 			/>
 			<FechaEntrega
-				id="Fecha_entrega"
-				name="FechaEntrega"
+				id="fecha_entrega"
+				name="fechaEntrega"
 				text="Fecha de Entrega"
+				classNameInput="datepicker"
 				className="col s6"
 				icon="event_available"
 				classNameIcon="prefix"
-				onChange={props.loadSample}
+				onBlur={props.loadDates}
 			/>
 			<FechaToma
-				id="Fecha_toma"
-				name="FechaToma"
+				id="fecha_toma"
+				name="fechaToma"
 				text="Fecha y Hora de Toma"
+				classNameInput="datepicker"
 				className="col s6"
 				icon="event_note"
 				classNameIcon="prefix"
-				onChange={props.loadSample}
+				onBlur={props.loadDates}
 			/>
 		</div>
 	</div>
