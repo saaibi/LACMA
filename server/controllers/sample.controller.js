@@ -1,4 +1,5 @@
 const Sample = require("../models/sample");
+const dataModels = require("../utils/dataModels");
 const fs = require("fs");
 
 const sampleController = {};
@@ -8,17 +9,37 @@ sampleController.getAllSamples = async (req, res) => {
     res.json(samples);
 };
 
-//  Credit.schema.pre
-//  http://132.145.156.124:5000/recognition
+sampleController.getByIdSample = async (req, res) => {
+    const sample = await Sample.findById(req.params.id);
+    res.json(sample);
+};
+
+sampleController.getByIdSampleProducts = async (req, res) => {
+    const sample = await Sample.findById(req.params.id).populate('products').exec();
+    res.json(sample);
+};
+
 sampleController.createSample = async (req, res) => {
-    console.log(req.file)
-    console.log(req.file.path)
-    console.log(fs.readFileSync(req.file.path))
-    // const sample = new Sample();
-    // sample.img.data = fs.readFileSync(req.file.path)
-    // sample.img.contentType = 'image/jpg';
-  
-    // sample.save();
+    const newSample = dataModels(req.body);
+    await newSample.save((err, user) => {
+        if (err) return res.json({ error: err });
+        res.json({ status: "Sample Saved", user });
+    });
+};
+
+sampleController.updateSample = async (req, res) => {
+};
+
+sampleController.deleteSample = async (req, res) => {
+    try {
+        await Sample.findByIdAndRemove(req.params.id, (err, sample) => {
+            if (err) return res.json({ error: err });
+            res.json({ status: "Sample Removed" });
+        });
+    } catch (error) {
+        const message = error.message || error;
+        res.json({ error: message });
+    }
 };
 
 module.exports = sampleController;

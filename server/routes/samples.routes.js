@@ -18,10 +18,10 @@ const upload = multer({ storage: storage });
 const sampleController = require('../controllers/sample.controller');
 
 router.get('/', sampleController.getAllSamples);
-// router.get('/:id', clientController.getByIdClient);
-// router.get('/:id/credit', clientController.getByIdClientCredit);
-router.post('/', upload.single('sampleImages'), sampleController.createSample);
-// router.put('/:id/client', clientController.updateClient);
-// router.delete('/:id', clientController.deleteClient);
+router.get('/:id', sampleController.getByIdSample);
+router.get('/:id/products', sampleController.getByIdSampleProducts);
+router.post('/', sampleController.createSample);
+router.put('/:id', sampleController.updateSample);
+router.delete('/:id', sampleController.deleteSample);
 
 module.exports = router;

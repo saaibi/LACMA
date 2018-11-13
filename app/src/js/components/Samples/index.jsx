@@ -16,12 +16,16 @@ class Sample extends Component {
 
     componentDidMount() {
         const dateMax = moment(Date.now()).add(1, 'months').format();
+        $('.timepicker').timepicker({
+            autoClose: true,
+            twelveHour: false,
+            showClearBtn: true,
+        });
         $('.datepicker').datepicker({
             format: "dd/mm/yyyy",
             autoClose: true,
-            disableWeekends: true,
             showClearBtn: true,
-            setDefaultDate: true,
+            disableWeekends: true,
             minDate: new Date(),
             maxDate: new Date(dateMax),
             onSelect: this.saveDates
@@ -30,7 +34,7 @@ class Sample extends Component {
     saveDates = (e) => {
         const { sample } = this.state;
         console.log(inputName)
-        console.log("load Dates2  ", e)
+        console.log("load Dates2  ", moment(e).format('DD/MM/YYYY'))
     }
 
     loadDates = (e) => {
