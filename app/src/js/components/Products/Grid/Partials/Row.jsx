@@ -37,7 +37,7 @@ class Row extends Component {
 		this.props.optionsProduct(data)
 	}
 	render() {
-		const { product } = this.props;
+		const { product, actions } = this.props;
 		return (
 			<tr>
 				<td>{product.name}</td>
@@ -47,15 +47,15 @@ class Row extends Component {
 				<td>{product.limitMin}</td>
 				<td>{product.limitMax}</td>
 				<td>{product.method}</td>
-				<td>
+				{actions && (<td>
 					<ActionBarGrid
 						id={product._id}
 						onEdit={this.onEdit}
 						onDelete={this.onDelete}
 						onView={this.onView}
 					/>
-
-				</td>
+				</td>)
+				}
 			</tr>
 		);
 	}

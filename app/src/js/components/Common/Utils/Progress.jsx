@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Progress = ({ type }) => type === "linear" ? (
-    <div className="progress">
+const Progress = ({ type, className }) => type === "linear" ? (
+    <div className={`progress ${className}`}>
         <div className="indeterminate"></div>
     </div>
 ) : (
@@ -22,7 +22,8 @@ const Progress = ({ type }) => type === "linear" ? (
     );
 
 Progress.defaultProps = {
-    type: 'linear'
+    type: 'linear',
+    className: ''
 }
 
 Progress.propsType = {

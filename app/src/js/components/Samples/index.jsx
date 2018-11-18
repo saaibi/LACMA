@@ -15,28 +15,13 @@ class Sample extends Component {
     }
 
     componentDidMount() {
-        const dateMax = moment(Date.now()).add(1, 'months').format();
-        $('.timepicker').timepicker({
-            autoClose: true,
-            twelveHour: false,
-            showClearBtn: true,
-            defaultTime: '',
-            onSelect: (hour , minute) => {
-                console.log(hour )
-                console.log(minute)
-            }
-        });
-
-        $('.datepicker').datepicker({
-            format: "dd/mm/yyyy",
-            autoClose: true,
-            showClearBtn: true,
-            disableWeekends: true,
-            minDate: new Date(),
-            maxDate: new Date(dateMax),
-            onSelect: this.saveDates
-        });
+        this.datepickerSample();
     }
+
+    componentDidUpdate() {
+        this.datepickerSample();
+    }
+
     saveDates = (e) => {
         const { sample } = this.state;
         console.log(inputName)
@@ -69,7 +54,30 @@ class Sample extends Component {
         })
     }
 
+    datepickerSample = (e) => {
+        // let today = new Date().toISOString().split("T")[0];
+        const dateMax = moment(Date.now()).add(1, 'months').format();
+        $('.timepicker').timepicker({
+            autoClose: true,
+            twelveHour: false,
+            showClearBtn: true,
+            defaultTime: '',
+            onSelect: (hour, minute) => {
+                console.log(hour)
+                console.log(minute)
+            }
+        });
 
+        $('.datepicker').datepicker({
+            format: "dd/mm/yyyy",
+            autoClose: true,
+            showClearBtn: true,
+            disableWeekends: true,
+            minDate: new Date(),
+            maxDate: new Date(dateMax),
+            onSelect: this.saveDates
+        });
+    }
 
     render() {
         console.log(this.state.sample)
@@ -78,6 +86,7 @@ class Sample extends Component {
                 createSample={this.createSample}
                 loadSample={this.loadSample}
                 loadDates={this.loadDates}
+                loadProduct={this.loadProduct}
             />
         );
     }

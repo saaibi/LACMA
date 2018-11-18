@@ -1,10 +1,11 @@
 import { PRODUCT_GETBYID, PRODUCT_GETALL, PRODUCT_CREATE, PRODUCT_UPDATE, PRODUCT_DELETE } from '../constants/product.constans';
 
 const initialState = {
-  products: [],
-  product: '',
-  isLoading: false,
   error: '',
+  product: '',
+  products: [],
+  productSelect: [],
+  isLoading: false,
 };
 
 
@@ -27,10 +28,12 @@ export function product(state = initialState, action) {
         ...payload,
       };
     case PRODUCT_GETBYID.SUCCESS: {
-      const { product } = payload;
+      const { product, isLoading } = payload;
       return {
         ...state,
+        isLoading,
         product,
+        productSelect: [product]
       };
     }
     case PRODUCT_CREATE.SUCCESS: {
@@ -42,10 +45,9 @@ export function product(state = initialState, action) {
     }
 
     case PRODUCT_UPDATE.SUCCESS: {
-      const { product, index, ...propEstados } = payload;
+      const { product, index } = payload;
       return {
         ...state,
-        ...propEstados,
         products: [
           ...state.products.slice(0, index),
           product,
@@ -55,9 +57,12 @@ export function product(state = initialState, action) {
     }
 
     case PRODUCT_DELETE.SUCCESS: {
-      const { index } = payload;
+      const { index, isLoading } = payload;
       return {
         ...state,
+        isLoading,
+        product: '',
+        productSelect: [],
         products: [
           ...state.products.slice(0, index),
           ...state.products.slice(index + 1),

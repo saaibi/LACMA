@@ -7,7 +7,7 @@ const getAllProduct = () => {
     const request = () => ({
         type: PRODUCT_GETALL.REQUEST,
         payload: {
-            clients: [],
+            products: [],
             isLoading: true,
             error: '',
         },
@@ -25,7 +25,7 @@ const getAllProduct = () => {
     const failure = error => ({
         type: PRODUCT_GETALL.FAILURE,
         payload: {
-            isLoading: true,
+            isLoading: false,
             error,
         },
     });
@@ -46,6 +46,7 @@ const getProductById = (id) => {
     const request = () => ({
         type: PRODUCT_GETBYID.REQUEST,
         payload: {
+            productSelect: [],
             isLoading: true,
             error: '',
         },

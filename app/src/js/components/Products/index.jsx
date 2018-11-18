@@ -69,17 +69,17 @@ class Product extends Component {
 			}
 		}
 
-		// let content = contentModal == "edit" ? content =
-		// 	<Edit client={clientEdit} updateProduct={this.updateProduct} loadProduct={this.loadProductEdit} /> : content =
-		// 	<View client={product} />;
-
 		return (
 			<div className="row">
 				<div className="col s12 m4 l3">
 					<Form createProduct={this.createProduct} loadProduct={this.loadProduct} />
 				</div>
 				<div className="col s12 m8 l9">
-					<Grid product={products.products} optionsProduct={this.optionsProduct} />
+					<Grid
+						actions={true}
+						product={products.products}
+						optionsProduct={this.optionsProduct}
+					/>
 				</div>
 			</div>
 		);

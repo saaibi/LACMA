@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import Row from './Row';
 
-const Rows = ({ product, optionsProduct }) => (
+const Rows = ({ product, optionsProduct, actions }) => (
 	<tbody>
 		{
 			product.map(
-				(product, index) => <Row key={index} product={product} optionsProduct={optionsProduct} />
+				(product, index) => <Row key={index} product={product} actions={actions} optionsProduct={optionsProduct} />
 			)
 		}
 	</tbody>

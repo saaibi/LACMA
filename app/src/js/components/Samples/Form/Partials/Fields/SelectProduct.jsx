@@ -3,8 +3,9 @@ import { connect } from 'react-redux'
 
 import { productActions } from "../../../../../actions/product.actions";
 
-import Product from '../../../../Common/Input';
+import Select from '../../../../Common/Select';
 import Grid from '../../../../Products/Grid'
+import Progress from '../../../../Common/Utils/Progress';
 
 class SelectProduct extends Component {
 
@@ -12,29 +13,38 @@ class SelectProduct extends Component {
 		this.props.dispatch(productActions.getAllProduct());
 	}
 
+	componentDidUpdate() {
+		$('select').formSelect();
+	}
+
+	handleProduct = (e) => {
+		e.preventDefault();
+		const { loadSample } = this.props
+		const { value } = e.target;
+		this.props.dispatch(productActions.getProductById(value));
+		loadSample(e);
+	}
+
 	render() {
-		const { products, loadSample } = this.props
-		if (products.isLoading) {
-			if (!products.products) {
-				return (
-					<Progress type="circle" />
-				)
-			}
-		}
+		const { products } = this.props
+
+		if (products.isLoading) { return (<Progress className="selectproduct" />) }
+		if (!products.products) { return (<Progress className="selectproduct" />) }
+
 		return (
 			<div className="row">
 				<div className="container">
-					<Product
+					<Select
 						id="products"
 						name="products"
-						text="Product"
-						className="col s12"
-						autoFocus={true}
 						icon="card_giftcard"
 						classNameIcon="prefix"
-						onChange={loadSample}
+						defaultText="Selecciona"
+						defaultValue={products.product ? products.product._id : '1'}
+						onChange={(e) => this.handleProduct(e)}
+						items={products.products}
 					/>
-					<Grid product={products.products} />
+					<Grid product={products.productSelect} />
 				</div>
 			</div>
 		)

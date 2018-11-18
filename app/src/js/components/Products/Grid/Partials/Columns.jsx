@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Columns = () => (
+const Columns = ({ actions }) => (
 	<thead>
 		<tr>
 			<th>Nombre de Producto</th>
@@ -10,7 +10,7 @@ const Columns = () => (
 			<th>Limite Min</th>
 			<th>Limite Max</th>
 			<th>Metodo</th>
-			<th>Actions</th>
+			{actions && (<th>Actions</th>)}
 		</tr>
 	</thead>
 );
