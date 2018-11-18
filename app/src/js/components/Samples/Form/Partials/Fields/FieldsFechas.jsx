@@ -16,7 +16,7 @@ const Fields = (props) => (
 				name="receiptDate"
 				text="Fecha y Hora de Recibo"
 				classNameInput="datepicker"
-				className="col s6"
+				className="col s12 m12 l6"
 				icon="event_note"
 				classNameIcon="prefix"
 				onBlur={props.loadDates}
@@ -26,7 +26,7 @@ const Fields = (props) => (
 				name="startDateAnalysis"
 				text="Fecha y Hora Inicio Análisis"
 				classNameInput="datepicker"
-				className="col s6"
+				className="col s12 m12 l6"
 				icon="event_busy"
 				classNameIcon="prefix"
 				onBlur={props.loadDates}
@@ -36,7 +36,7 @@ const Fields = (props) => (
 				name="endDateAnalysis"
 				text="Fecha y Hora Final de Analisis"
 				classNameInput="datepicker"
-				className="col s6"
+				className="col s12 m12 l6"
 				icon="event_available"
 				classNameIcon="prefix"
 				onBlur={props.loadDates}
@@ -46,7 +46,7 @@ const Fields = (props) => (
 				name="reportDate"
 				text="Fecha Elaboración de Informe"
 				classNameInput="datepicker"
-				className="col s6"
+				className="col s12 m12 l6"
 				icon="date_range"
 				classNameIcon="prefix"
 				onBlur={props.loadDates}
@@ -56,7 +56,7 @@ const Fields = (props) => (
 				name="agreedDeliveryDate"
 				text="Fecha Pactada de Entrega"
 				classNameInput="datepicker"
-				className="col s6"
+				className="col s12 m12 l6"
 				icon="insert_invitation"
 				classNameIcon="prefix"
 				onBlur={props.loadDates}
@@ -66,7 +66,7 @@ const Fields = (props) => (
 				name="deliveryDate"
 				text="Fecha de Entrega"
 				classNameInput="datepicker"
-				className="col s6"
+				className="col s12 m12 l6"
 				icon="event_available"
 				classNameIcon="prefix"
 				onBlur={props.loadDates}
@@ -76,7 +76,7 @@ const Fields = (props) => (
 				name="takeSampleDate"
 				text="Fecha y Hora de Toma"
 				classNameInput="datepicker"
-				className="col s6"
+				className="col s12 m12 l6"
 				icon="event_note"
 				classNameIcon="prefix"
 				onBlur={props.loadDates}
