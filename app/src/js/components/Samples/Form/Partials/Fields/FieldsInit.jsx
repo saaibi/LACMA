@@ -10,8 +10,8 @@ const Fields = (props) => (
 	<div className="row">
 		<div className="container">
 			<Codigo
-				id="codigo"
-				name="codigo"
+				id="code"
+				name="code"
 				text="Codigo"
 				className="col s4"
 				autoFocus={true}
@@ -29,8 +29,8 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<Referencia
-				id="referencia"
-				name="referencia"
+				id="reference"
+				name="reference"
 				text="Referencia"
 				className="col s4"
 				icon="mood"
@@ -38,8 +38,8 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<Analista
-				id="analista"
-				name="analista"
+				id="analyst"
+				name="analyst"
 				text="Analista"
 				className="col s6"
 				icon="person"
@@ -47,8 +47,8 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<Coordinador
-				id="coordinador"
-				name="coordinador"
+				id="coordinator"
+				name="coordinator"
 				text="Coordinador"
 				className="col s6"
 				icon="person"

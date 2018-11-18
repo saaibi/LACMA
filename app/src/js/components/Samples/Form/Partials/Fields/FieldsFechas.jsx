@@ -12,8 +12,8 @@ const Fields = (props) => (
 	<div className="row">
 		<div className="container">
 			<FechaRecibo
-				id="fecha_recibo"
-				name="fechaRecibo"
+				id="receipt_date"
+				name="receiptDate"
 				text="Fecha y Hora de Recibo"
 				classNameInput="datepicker"
 				className="col s6"
@@ -22,8 +22,8 @@ const Fields = (props) => (
 				onBlur={props.loadDates}
 			/>
 			<FechaInicioAnalisis
-				id="fecha_inicio_analisis"
-				name="fechaInicioAnalisis"
+				id="start_date_analysis"
+				name="startDateAnalysis"
 				text="Fecha y Hora Inicio Análisis"
 				classNameInput="datepicker"
 				className="col s6"
@@ -32,8 +32,8 @@ const Fields = (props) => (
 				onBlur={props.loadDates}
 			/>
 			<FechaFinalAnalisis
-				id="fecha_final_analisis"
-				name="fechaFinalAnalisis"
+				id="end_date_analysis"
+				name="endDateAnalysis"
 				text="Fecha y Hora Final de Analisis"
 				classNameInput="datepicker"
 				className="col s6"
@@ -42,8 +42,8 @@ const Fields = (props) => (
 				onBlur={props.loadDates}
 			/>
 			<FechaElabInforme
-				id="fecha_elab_informe"
-				name="fechaElabInforme"
+				id="report_date"
+				name="reportDate"
 				text="Fecha Elaboración de Informe"
 				classNameInput="datepicker"
 				className="col s6"
@@ -52,8 +52,8 @@ const Fields = (props) => (
 				onBlur={props.loadDates}
 			/>
 			<FechaPactadaEntrega
-				id="fecha_pactada_entrega"
-				name="fechaPactadaEntrega"
+				id="agreed_delivery_date"
+				name="agreedDeliveryDate"
 				text="Fecha Pactada de Entrega"
 				classNameInput="datepicker"
 				className="col s6"
@@ -62,8 +62,8 @@ const Fields = (props) => (
 				onBlur={props.loadDates}
 			/>
 			<FechaEntrega
-				id="fecha_entrega"
-				name="fechaEntrega"
+				id="delivery_date"
+				name="deliveryDate"
 				text="Fecha de Entrega"
 				classNameInput="datepicker"
 				className="col s6"
@@ -72,8 +72,8 @@ const Fields = (props) => (
 				onBlur={props.loadDates}
 			/>
 			<FechaToma
-				id="fecha_toma"
-				name="fechaToma"
+				id="take_sample_date"
+				name="takeSampleDate"
 				text="Fecha y Hora de Toma"
 				classNameInput="datepicker"
 				className="col s6"

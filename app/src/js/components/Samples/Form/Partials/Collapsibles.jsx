@@ -9,7 +9,7 @@ import SelectProduct from './Fields/SelectProduct';
 
 const Collapsibles = (props) => {
     return (
-        <Collapsible popout defaultActiveKey={1}>
+        <Collapsible popout defaultActiveKey={0}>
             <CollapsibleItem
                 header="Registro y Lectura de Muestras "
                 icon='assignment'
@@ -18,12 +18,12 @@ const Collapsibles = (props) => {
             <CollapsibleItem
                 header="Fechas"
                 icon='insert_invitation'
-                content={<FieldsFechas loadSample={props.loadSample} loadDates={props.loadDates} />}
+                content={<FieldsFechas loadDates={props.loadDates} />}
             />
             <CollapsibleItem
                 header="Detail"
                 icon='chrome_reader_mode'
-                content={<FieldsDetails loadSample={props.loadSample} />}
+                content={<FieldsDetails loadSample={props.loadSample} loadDates={props.loadDates}/>}
             />
             <CollapsibleItem
                 header="Selección de Producto"

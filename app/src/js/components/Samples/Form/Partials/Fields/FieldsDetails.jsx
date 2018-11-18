@@ -17,8 +17,8 @@ const Fields = (props) => (
 	<div className="row">
 		<div className="container">
 			<TipoMuestra
-				id="tipo_muestra"
-				name="TipoMuestra"
+				id="type_sample"
+				name="typeSample"
 				text="Tipo de Muestra"
 				className="col s6"
 				autoFocus={true}
@@ -27,8 +27,8 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<ResponsableTomaMuestra
-				id="responsable_toma_muestra"
-				name="ResponsableTomaMuestra"
+				id="responsible_sample"
+				name="responsibleSample"
 				text="Responsable Toma de Muestra"
 				className="col s6"
 				icon="perm_identity"
@@ -36,8 +36,8 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<CantidadMuestra
-				id="cantidad_muestra"
-				name="CantidadMuestra"
+				id="quantity"
+				name="quantity"
 				text="Cantidad de Muestra"
 				className="col s6"
 				icon="sort"
@@ -46,7 +46,7 @@ const Fields = (props) => (
 			/>
 			<Lote
 				id="lote"
-				name="Lote"
+				name="lote"
 				text="Lote"
 				className="col s6"
 				icon="line_style"
@@ -54,28 +54,28 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<FechaFabricacion
-				id="fecha_fabricacion"
-				name="FechaFabricacion"
+				id="manufacturingDate"
+				name="manufacturingDate"
 				text="Fecha de Fabricacion"
 				classNameInput="datepicker"
 				className="col s6"
 				icon="event"
 				classNameIcon="prefix"
-				onBlur={props.loadSample}
+				onBlur={props.loadDates}
 			/>
 			<FechaVencimiento
-				id="fecha_vencimiento"
-				name="FechaVencimiento"
+				id="expirationDate"
+				name="expirationDate"
 				text="Fecha de Vencimineto"
 				classNameInput="datepicker"
 				className="col s6"
 				icon="event_busy"
 				classNameIcon="prefix"
-				onBlur={props.loadSample}
+				onBlur={props.loadDates}
 			/>
 			<TipoEnvaEmpa
-				id="tipo_enva_empa"
-				name="TipoEnvaEmpa"
+				id="type_container"
+				name="typeContainer"
 				text="Tipo de Envase-Empaque"
 				className="col s6"
 				icon="inbox"
@@ -83,8 +83,8 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<Color
-				id="color_muestra"
-				name="Color"
+				id="color"
+				name="color"
 				text="Color"
 				className="col s6"
 				icon="format_color_fill"
@@ -92,8 +92,8 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<Olor
-				id="olor_muestra"
-				name="Olor"
+				id="smell"
+				name="smell"
 				text="Olor"
 				className="col s6"
 				icon="record_voice_over"
@@ -101,8 +101,8 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<Aspecto
-				id="aspecto_muestra"
-				name="Aspecto"
+				id="appearance"
+				name="appearance"
 				text="Aspecto"
 				className="col s6"
 				icon="receipt"
@@ -110,8 +110,8 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<CaracOrganolepticas
-				id="carac_organolepticas"
-				name="CaracOrganolepticas"
+				id="characteristicsOrganoleptic"
+				name="characteristicsOrganoleptic"
 				text="Características Organolépticas"
 				className="col s6"
 				icon="gradient"
@@ -119,8 +119,8 @@ const Fields = (props) => (
 				onChange={props.loadSample}
 			/>
 			<CondicionesLlegada
-				id="condiciones_llegada"
-				name="CondicionesLlegada"
+				id="temperature"
+				name="temperature"
 				text="Condiciones de Llegada al laboratorio Temperatura ºC"
 				className="col s12"
 				icon="done"

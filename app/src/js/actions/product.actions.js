@@ -42,7 +42,7 @@ const getAllProduct = () => {
     };
 };
 
-const getById = (id) => {
+const getProductById = (id) => {
     const request = () => ({
         type: PRODUCT_GETBYID.REQUEST,
         payload: {
@@ -213,7 +213,7 @@ const deleteProduct = (product_id) => {
 
 export const productActions = {
     getAllProduct,
-    getById,
+    getProductById,
     createProduct,
     updateProduct,
     deleteProduct

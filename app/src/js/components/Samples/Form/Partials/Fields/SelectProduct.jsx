@@ -25,8 +25,8 @@ class SelectProduct extends Component {
 			<div className="row">
 				<div className="container">
 					<Product
-						id="product"
-						name="Product"
+						id="products"
+						name="products"
 						text="Product"
 						className="col s12"
 						autoFocus={true}

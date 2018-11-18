@@ -5,13 +5,13 @@ import moment from 'moment'
 
 import Form from './Form';
 
+import initialState from '../../utils/sample-state';
+
 let inputName = '';
 
 class Sample extends Component {
     state = {
-        sample: {
-
-        }
+        sample: initialState
     }
 
     componentDidMount() {
@@ -20,7 +20,13 @@ class Sample extends Component {
             autoClose: true,
             twelveHour: false,
             showClearBtn: true,
+            defaultTime: '',
+            onSelect: (hour , minute) => {
+                console.log(hour )
+                console.log(minute)
+            }
         });
+
         $('.datepicker').datepicker({
             format: "dd/mm/yyyy",
             autoClose: true,
@@ -34,12 +40,18 @@ class Sample extends Component {
     saveDates = (e) => {
         const { sample } = this.state;
         console.log(inputName)
-        console.log("load Dates2  ", moment(e).format('DD/MM/YYYY'))
+        console.log(e)
+        console.log("load Dates2  ", moment(e).format())
+        this.setState({
+            sample: {
+                ...sample,
+                [inputName]: moment(e).format()
+            }
+        })
     }
 
     loadDates = (e) => {
-        const { name } = e.target;
-        inputName = name;
+        inputName = e.target.name;
     }
 
     createSample = (e) => {
@@ -49,7 +61,6 @@ class Sample extends Component {
     loadSample = (e) => {
         const { sample } = this.state;
         const { name, value } = e.target;
-        console.log("load Sample  ", name, value)
         this.setState({
             sample: {
                 ...sample,
@@ -61,6 +72,7 @@ class Sample extends Component {
 
 
     render() {
+        console.log(this.state.sample)
         return (
             <Form
                 createSample={this.createSample}
