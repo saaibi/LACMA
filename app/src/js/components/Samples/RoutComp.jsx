@@ -7,7 +7,7 @@ class AppSample extends Component {
 	render() {
 		return (
 			<div className="container">
-				<AppHeader name="MUESTRAS" />
+				<AppHeader name="CREAR MUESTRA" />
 				<Sample />
 			</div>
 		);

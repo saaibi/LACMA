@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 
 import HeaderNoUser from './HeaderNoUser'
@@ -9,7 +10,17 @@ class Header extends Component {
         const { name, isLoggedIn } = this.props
         return (
             <div>
-                <nav>
+                <ul id="dropdown1" className="dropdown-content">
+                    <li><a href="#!">Ver</a></li>
+                    <li className="divider"></li>
+                    <li><Link to="/samples">Crear</Link></li>
+                </ul>
+                <ul id="dropdown2" className="dropdown-content">
+                    <li><a href="#!">Ver</a></li>
+                    <li className="divider"></li>
+                    <li><Link to="/samples">Crear</Link></li>
+                </ul>
+                <nav className="pink">
                     <div className="nav-wrapper">
                         <a href="#!" className="brand-logo">{name}</a>
                         <a href="#" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></a>
