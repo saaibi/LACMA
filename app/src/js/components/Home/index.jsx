@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 class HomePage extends Component {
+
+    componentDidMount() {
+		$('.sidenav').sidenav({
+			edge: 'left',
+		});
+    }
+    
     render() {
         return (
             <div>

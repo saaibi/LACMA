@@ -36,8 +36,8 @@ const login = (username, password) => {
 
             dispatch(success(user.data.user));
             localStorage.setItem('user', JSON.stringify(user.data.user));
-            history.push('/users');
-            window.location.reload();
+            history.push('/');
+            // window.location.reload();
         } catch (error) {
             M.toast({ html: `Username or password is incorrect`, classes: 'rounded' });
             const message = error.message || error;

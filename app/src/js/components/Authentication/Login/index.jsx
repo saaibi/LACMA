@@ -31,6 +31,12 @@ class AppLogin extends Component {
         this.props.dispatch(userActions.logout());
     }
     
+    componentDidMount() {
+		$('.sidenav').sidenav({
+			edge: 'left',
+		});
+    }
+    
     render() {
         const { loggingIn } = this.props;
         const { email, password, submitted } = this.state;
