@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import moment from 'moment'
 
+import { sampleActions } from "../../actions/sample.actions";
+
 import Form from './Form';
 
 import initialState from '../../utils/sample-state';
@@ -40,7 +42,8 @@ class Sample extends Component {
     }
 
     createSample = (e) => {
-        console.log("Create Sample")
+        e.preventDefault();
+		this.props.dispatch(sampleActions.createSample(this.state.sample));
     }
 
     loadSample = (e) => {
@@ -80,7 +83,6 @@ class Sample extends Component {
     }
 
     render() {
-        console.log(this.state.sample)
         return (
             <Form
                 createSample={this.createSample}
