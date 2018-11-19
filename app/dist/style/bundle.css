@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0; }
 
-.align-center, .align-left, .align-right {
+.align-center, .align-left, .align-right, .align-items-start {
   display: flex;
   flex-direction: row; }
 
@@ -16,6 +16,9 @@
 .align-left {
   justify-content: flex-start; }
 
+.align-items-start {
+  align-items: flex-start; }
+
 .align-right {
   justify-content: flex-end; }
 
@@ -24,3 +27,6 @@
 
 .justify-between {
   justify-content: space-around; }
+
+.selectproduct {
+  margin-top: -28px; }

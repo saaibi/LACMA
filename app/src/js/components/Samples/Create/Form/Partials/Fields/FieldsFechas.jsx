@@ -1,12 +1,12 @@
 import React from 'react';
 
-import FechaRecibo from '../../../../Common/Input';
-import FechaInicioAnalisis from '../../../../Common/Input';
-import FechaFinalAnalisis from '../../../../Common/Input';
-import FechaElabInforme from '../../../../Common/Input';
-import FechaPactadaEntrega from '../../../../Common/Input';
-import FechaEntrega from '../../../../Common/Input';
-import FechaToma from '../../../../Common/Input';
+import FechaRecibo from '../../../../../Common/Input';
+import FechaInicioAnalisis from '../../../../../Common/Input';
+import FechaFinalAnalisis from '../../../../../Common/Input';
+import FechaElabInforme from '../../../../../Common/Input';
+import FechaPactadaEntrega from '../../../../../Common/Input';
+import FechaEntrega from '../../../../../Common/Input';
+import FechaToma from '../../../../../Common/Input';
 
 const Fields = (props) => (
 	<div className="row">

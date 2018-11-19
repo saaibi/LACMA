@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import AppHeader from '../AppHeader';
+import AppHeader from '../../AppHeader';
 import Sample from '.';
 
 class AppSample extends Component {

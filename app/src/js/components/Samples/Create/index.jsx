@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import moment from 'moment'
 
-import { sampleActions } from "../../actions/sample.actions";
+import { sampleActions } from "../../../actions/sample.actions";
 
 import Form from './Form';
 
-import initialState from '../../utils/sample-state';
+import initialState from '../../../utils/sample-state';
 
 let inputName = '';
 

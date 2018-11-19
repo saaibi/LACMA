@@ -1,7 +1,7 @@
 import React from 'react';
 import { Collapsible } from 'react-materialize';
 
-import CollapsibleItem from '../../../Common/Collapsible/CollapsibleItems';
+import CollapsibleItem from '../../../../Common/Collapsible/CollapsibleItems';
 import FieldsInit from './Fields/FieldsInit';
 import FieldsFechas from './Fields/FieldsFechas';
 import FieldsDetails from './Fields/FieldsDetails';

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
-import { productActions } from "../../../../../actions/product.actions";
+import { productActions } from "../../../../../../actions/product.actions";
 
-import Select from '../../../../Common/Select';
-import Grid from '../../../../Products/Grid'
-import Progress from '../../../../Common/Utils/Progress';
+import Select from '../../../../../Common/Select';
+import Grid from '../../../../../Products/Grid'
+import Progress from '../../../../../Common/Utils/Progress';
 
 class SelectProduct extends Component {
 

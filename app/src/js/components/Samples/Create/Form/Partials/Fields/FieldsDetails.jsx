@@ -1,17 +1,17 @@
 import React from 'react';
 
-import TipoMuestra from '../../../../Common/Input';
-import ResponsableTomaMuestra from '../../../../Common/Input';
-import CantidadMuestra from '../../../../Common/Input';
-import Lote from '../../../../Common/Input';
-import FechaFabricacion from '../../../../Common/Input';
-import FechaVencimiento from '../../../../Common/Input';
-import TipoEnvaEmpa from '../../../../Common/Input';
-import Color from '../../../../Common/Input';
-import Olor from '../../../../Common/Input';
-import Aspecto from '../../../../Common/Input';
-import CaracOrganolepticas from '../../../../Common/Input';
-import CondicionesLlegada from '../../../../Common/Input';
+import TipoMuestra from '../../../../../Common/Input';
+import ResponsableTomaMuestra from '../../../../../Common/Input';
+import CantidadMuestra from '../../../../../Common/Input';
+import Lote from '../../../../../Common/Input';
+import FechaFabricacion from '../../../../../Common/Input';
+import FechaVencimiento from '../../../../../Common/Input';
+import TipoEnvaEmpa from '../../../../../Common/Input';
+import Color from '../../../../../Common/Input';
+import Olor from '../../../../../Common/Input';
+import Aspecto from '../../../../../Common/Input';
+import CaracOrganolepticas from '../../../../../Common/Input';
+import CondicionesLlegada from '../../../../../Common/Input';
 
 const Fields = (props) => (
 	<div className="row">

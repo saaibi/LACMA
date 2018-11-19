@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Codigo from '../../../../Common/Input';
-import Version from '../../../../Common/Input';
-import Referencia from '../../../../Common/Input';
-import Analista from '../../../../Common/Input';
-import Coordinador from '../../../../Common/Input';
+import Codigo from '../../../../../Common/Input';
+import Version from '../../../../../Common/Input';
+import Referencia from '../../../../../Common/Input';
+import Analista from '../../../../../Common/Input';
+import Coordinador from '../../../../../Common/Input';
 
 const Fields = (props) => (
 	<div className="row">

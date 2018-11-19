@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Save from '../../../Common/Button';
-import Clean from '../../../Common/Button';
+import Save from '../../../../Common/Button';
+import Clean from '../../../../Common/Button';
 
 const ActionBar = (props) => (
 	<div className="align-center">
