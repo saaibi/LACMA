@@ -6,7 +6,7 @@ class HomePage extends Component {
     componentDidMount() {
 		$('.sidenav').sidenav({
 			edge: 'left',
-		});
+        });
     }
     
     render() {
