@@ -1,6 +1,7 @@
 import findIndex from 'lodash/findIndex'
 import { makeRequestAsync } from '../services'
 import { SAMPLE_GETALL, SAMPLE_GETBYID, SAMPLE_CREATE, SAMPLE_UPDATE, SAMPLE_DELETE } from '../constants/sample.constans';
+import { history } from '../store';
 
 
 const getAllSample = () => {
@@ -112,6 +113,7 @@ const createSample = (sampleCreate) => {
             const samples = await makeRequestAsync(`/samples`, "POST", sampleCreate);
             dispatch(success(samples.data.samples));
             M.toast({ html: `${samples.data.status}`, classes: 'rounded' });
+            history.push('/viewsamples');
         } catch (error) {
             const message = error.message || error;
             dispatch(failure({ error: message }));

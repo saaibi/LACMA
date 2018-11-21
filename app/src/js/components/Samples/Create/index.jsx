@@ -28,7 +28,7 @@ class Sample extends Component {
         const { sample } = this.state;
         console.log(inputName)
         console.log(e)
-        console.log("load Dates2  ", moment(e).format())
+        console.log("load Dates2  ", moment(e).format('DD/MM/YYYY'))
         this.setState({
             sample: {
                 ...sample,

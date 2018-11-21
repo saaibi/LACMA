@@ -10,6 +10,7 @@ import { AppRegister } from "../components/Authentication/Register";
 import { AppLogin } from "../components/Authentication/Login";
 import { AppClient } from "../components/Clients/RoutComp";
 import { AppSample } from "../components/Samples/Create/RoutComp";
+import { AppViewSample } from "../components/Samples/View/RoutComp";
 import { AppResult } from "../components/Results/RoutComp";
 import { AppProducts } from "../components/Products/RoutComp";
 import { AppUsers } from "../components/Users/RoutComp";
@@ -26,6 +27,7 @@ const Routes = () => {
           <PrivateRoute path="/clients" component={AppClient} />
           <PrivateRoute path="/results" component={AppResult} />
           <PrivateRoute path="/samples" component={AppSample} />
+          <PrivateRoute path="/viewsamples" component={AppViewSample} />
           <PrivateRoute path="/products" component={AppProducts} />
           <PrivateRoute path="/users" component={AppUsers} />
         </div>

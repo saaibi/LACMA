@@ -6,7 +6,7 @@ import HeaderNoUser from './HeaderNoUser'
 import HeaderUser from './HeaderUser'
 
 class Header extends Component {
-    componentDidMount(){
+    componentDidMount() {
         $(".dropdown-trigger").dropdown();
     }
     render() {
@@ -14,12 +14,12 @@ class Header extends Component {
         return (
             <div>
                 <ul id="dropdown1" className="dropdown-content">
-                    <li><a href="#!">Ver</a></li>
+                    <li><Link to="/viewsamples">ver</Link></li>
                     <li className="divider"></li>
                     <li><Link to="/samples">Crear</Link></li>
                 </ul>
                 <ul id="dropdown2" className="dropdown-content">
-                    <li><a href="#!">Ver</a></li>
+                    <li><Link to="/viewsamples">ver</Link></li>
                     <li className="divider"></li>
                     <li><Link to="/samples">Crear</Link></li>
                 </ul>
