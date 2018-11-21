@@ -46,7 +46,7 @@ class Row extends Component {
 				<td>{sample.reference}</td>
 				<td>{sample.analyst}</td>
 				<td>{sample.coordinator}</td>
-				{/* <td>{sample.typeSample}</td>
+				<td>{sample.typeSample}</td>
 				<td>{sample.responsibleSample}</td>
 				<td>{sample.quantity}</td>
 				<td>{sample.lote}</td>
@@ -62,7 +62,7 @@ class Row extends Component {
 				<td>{moment(sample.startDateAnalysis).format('DD/MM/YYYY HH:mm')}</td>
 				<td>{moment(sample.endDateAnalysis).format('DD/MM/YYYY HH:mm')}</td>
 				<td>{moment(sample.reportDate).format('DD/MM/YYYY HH:mm')}</td>
-				<td>{moment(sample.agreedDeliveryDate).format('DD/MM/YYYY HH:mm')}</td> */}
+				<td>{moment(sample.agreedDeliveryDate).format('DD/MM/YYYY HH:mm')}</td>
 				<td>{moment(sample.deliveryDate).format('DD/MM/YYYY HH:mm')}</td>
 				<td>{moment(sample.takeSampleDate).format('DD/MM/YYYY HH:mm')}</td>
 				<td>

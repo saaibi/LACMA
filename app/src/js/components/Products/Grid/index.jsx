@@ -5,7 +5,7 @@ import Columns from './Partials/Columns';
 import Rows from './Partials/Rows';
 
 const Grid = ({ product, optionsProduct, actions }) => (
-	<table className="striped centered">
+	<table className="striped centered responsive-table">
 		<Columns actions={actions} />
 		<Rows
 			actions={actions}

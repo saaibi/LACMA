@@ -7,7 +7,7 @@ import Rows from './Partials/Rows';
 const Grid = (props) => {
 	const { users, optionsUsers } = props;
 	return (
-		<table className="striped centered">
+		<table className="striped centered responsive-table">
 			<Columns />
 			<Rows users={users} optionsUsers={optionsUsers} />
 		</table>

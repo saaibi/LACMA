@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);body {
-  background-color: #ECF0F1;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
@@ -30,3 +30,16 @@
 
 .selectproduct {
   margin-top: -28px; }
+
+.carousels {
+  white-space: nowrap;
+  transition: -webkit-transform cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.5s;
+  transition: transform cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.5s;
+  transition: transform cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.5s, -webkit-transform cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.5s; }
+  .carousels > div {
+    width: 33.3333%;
+    white-space: normal; }
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+  border: solid #e91e63; }
