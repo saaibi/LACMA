@@ -9,7 +9,7 @@ const ActionBar = (props) => (
 		<div className="row">
 			<div className="input-field col s4 offset-s2">
 				<Save
-					className="waves-effect waves-light blue lighten-1 btn"
+					className="waves-effect waves-light btn"
 					texto="Login"
 					icon="send"
 					classNameIcon="right"

@@ -30,6 +30,7 @@ const Input = ({ id, name, value, text, type, autoFocus, className, classNameInp
 Input.defaultProps = {
 	className: 'col s12',
 	classNameInput: "validate",
+	classNameLabel: "active",
 	type: 'text',
 	autoFocus: false
 };

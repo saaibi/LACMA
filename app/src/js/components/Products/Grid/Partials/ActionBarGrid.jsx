@@ -16,7 +16,7 @@ const ActionBarGrid = ({ id, onEdit, onDelete, onView }) => (
 		/>
 
 		<Delete
-			className="btn-floating  btn-small blue lighten-1"
+			className="btn-floating  btn-small"
 			icon="delete_forever"
 			classNameIcon="prefix"
 			onClick={(e) => onDelete(id)}

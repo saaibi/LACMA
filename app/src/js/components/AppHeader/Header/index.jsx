@@ -9,16 +9,21 @@ class Header extends Component {
     componentDidMount() {
         $(".dropdown-trigger").dropdown();
     }
+
+    componentWillMount(){
+        $(".dropdown-trigger").dropdown();
+    }
+
     render() {
         const { name, isLoggedIn } = this.props
         return (
             <div>
                 <ul id="dropdown2" className="dropdown-content">
-                    <li><Link to="/viewsamples">ver</Link></li>
+                    <li><Link to="/viewsamples">Ver</Link></li>
                     <li className="divider"></li>
                     <li><Link to="/samples">Crear</Link></li>
                 </ul>
-                <nav className="pink">
+                <nav className="">
                     <div className="nav-wrapper">
                         <Link to="/" className="brand-logo">{name}</Link>
                         <a href="#" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></a>
