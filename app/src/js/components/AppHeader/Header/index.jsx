@@ -13,11 +13,6 @@ class Header extends Component {
         const { name, isLoggedIn } = this.props
         return (
             <div>
-                <ul id="dropdown1" className="dropdown-content">
-                    <li><Link to="/viewsamples">ver</Link></li>
-                    <li className="divider"></li>
-                    <li><Link to="/samples">Crear</Link></li>
-                </ul>
                 <ul id="dropdown2" className="dropdown-content">
                     <li><Link to="/viewsamples">ver</Link></li>
                     <li className="divider"></li>
@@ -25,7 +20,7 @@ class Header extends Component {
                 </ul>
                 <nav className="pink">
                     <div className="nav-wrapper">
-                        <a href="#!" className="brand-logo">{name}</a>
+                        <Link to="/" className="brand-logo">{name}</Link>
                         <a href="#" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                         {isLoggedIn ? <HeaderUser menu="nav" /> : <HeaderNoUser menu="nav" />}
                     </div>

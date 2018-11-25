@@ -23,7 +23,7 @@ const Cards = ({ className, classNameImage, cardContent, cardTitle, cardTitleRel
     </div>
 );
 
-Cards.defaultPropTypes = {
+Cards.defaultProps = {
     className: '',
     classNameImage: '',
     cardTitle: 'LPA Software',

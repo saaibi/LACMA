@@ -3,6 +3,7 @@ import React from 'react';
 const Columns = () => (
 	<thead>
 		<tr>
+			<th>Actions</th>
 			<th>Codigo</th>
 			<th>Version</th>
 			<th>Referencia</th>
@@ -27,7 +28,6 @@ const Columns = () => (
 			<th>Fecha Pactada de Entrega</th>
 			<th>Fecha de Entrega</th>
 			<th>Fecha y Hora de Toma</th>
-			<th>Actions</th>
 		</tr>
 	</thead>
 );

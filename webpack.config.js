@@ -37,6 +37,11 @@ module.exports = (env, options) => {
             filename: DIST_FILE_JS_BUNDLE,
             sourceMapFilename: 'sourcemaps/[file].map',
         },
+        optimization: {
+            splitChunks: {
+                chunks: 'all'
+            }
+        },
         resolve: {
             extensions: [".jsx", ".js"],
         },

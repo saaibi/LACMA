@@ -41,6 +41,15 @@ class Row extends Component {
 		const { sample } = this.props;
 		return (
 			<tr>
+				<td>
+					<ActionBarGrid
+						id={sample._id}
+						onEdit={this.onEdit}
+						onDelete={this.onDelete}
+						onView={this.onView}
+					/>
+
+				</td>
 				<td>{sample.code}</td>
 				<td>{sample.version}</td>
 				<td>{sample.reference}</td>
@@ -65,15 +74,6 @@ class Row extends Component {
 				<td>{moment(sample.agreedDeliveryDate).format('DD/MM/YYYY HH:mm')}</td>
 				<td>{moment(sample.deliveryDate).format('DD/MM/YYYY HH:mm')}</td>
 				<td>{moment(sample.takeSampleDate).format('DD/MM/YYYY HH:mm')}</td>
-				<td>
-					<ActionBarGrid
-						id={sample._id}
-						onEdit={this.onEdit}
-						onDelete={this.onDelete}
-						onView={this.onView}
-					/>
-
-				</td>
 			</tr>
 		);
 	}
