@@ -1,3 +1,4 @@
+@import 'variables';
 // Add custom styled scrollbars when possible
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, transparent, 50%)) {
     ::-webkit-scrollbar {

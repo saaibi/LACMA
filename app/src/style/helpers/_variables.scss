@@ -1,30 +1,52 @@
 //@import url('https://fonts.googleapis.com/css?family=Spectral:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-
-
-// Color
 @import "../../../node_modules/materialize-css/sass/components/color-variables";
 @import "../../../node_modules/materialize-css/sass/components/color-classes";
 
 $transition: cubic-bezier(.17,.67,.83,.67);
 
-$blanco: #FFFFFF;
-
+// 1. Colors
+// ==========================================================================
 $primary-color: color("pink", "base") !default;
-$primary-color-light: false !default;
-$primary-color-dark: false !default;
-@if not $primary-color-light {
-    $primary-color-light: lighten($primary-color, 15%);
-}
-@if not $primary-color-dark {
-    $primary-color-dark: darken($primary-color, 15%);
-}
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
 $secondary-color: color("blue", "base") !default;
-
-$success-color: color("pink", "lighten-3") !default;
+$success-color: color("pink", "lighten-2") !default;
 $error-color: color("blue", "lighten-3") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
+$white: #FFFFFF;
+
+$colors2: (
+  "primary": $primary-color ,
+  "secondary": $secondary-color ,
+  "red": color("red", "base") ,
+  "pink": color("pink", "base") ,
+  "purple": color("purple", "base") ,
+  "deep-purple": color("deep-purple", "base") ,
+  "indigo": color("indigo", "base") ,
+  "blue": color("blue", "base") ,
+  "light-blue": color("light-blue", "base"),
+  "cyan": color("cyan", "base") ,
+  "teal": color("teal", "base") ,
+  "green": color("green", "base") ,
+  "light-green": color("light-green", "base") ,
+  "lime": color("lime", "base") ,
+  "yellow": color("yellow", "base") ,
+  "amber": color("amber", "base") ,
+  "orange":color("orange", "base") ,
+  "deep-orange": color("deep-orange", "base") ,
+  "brown": color("brown", "base") ,
+  "blue-grey": color("blue-grey", "base") ,
+  "grey":color("grey", "base") ,
+  "black": color("shades", "black") 
+) !default;
+
+// Collections
+$sides: "-top", "-bottom", "-left", "-right", "";
+
+// 20. Typography
+// ==========================================================================
 $font-roboto: 'Roboto', sans-serif;
 
 @import "../../../node_modules/materialize-css/sass/materialize.scss";

@@ -9,6 +9,7 @@ export const screenSize = () => {
 
     return { width, height };
 };
+
 export const getElementSize = elem => {
     if (elem) {
         let width = document.getElementById(elem).offsetWidth || elem.innerWidth || elem.clientWidth,

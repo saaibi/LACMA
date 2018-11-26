@@ -7,7 +7,7 @@ import Register from '../../../../Common/Button';
 const ActionBar = (props) => (
 	<div className="container">
 		<div className="row">
-			<div className="input-field col s4 offset-s2">
+			<div className="input-field col align-center  s12">
 				<Save
 					className="waves-effect waves-light btn"
 					texto="Login"

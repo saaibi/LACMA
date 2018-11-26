@@ -48,7 +48,7 @@ export class ViewSample extends Component {
         if (!samples.samples) { return (<Progress type="linear" />) }
 
         return (
-            <div className="overflow-x-hidden">
+            <div className="border-primary overflow-x-hidden">
                 <div
                     id="divGrid"
                     className="carousels"

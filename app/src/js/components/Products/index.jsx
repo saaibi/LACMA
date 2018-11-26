@@ -74,7 +74,7 @@ class Product extends Component {
 				<div className="col s12 m4 l3">
 					<Form createProduct={this.createProduct} loadProduct={this.loadProduct} />
 				</div>
-				<div className="col s12 m8 l9">
+				<div className="col s12 m8 l9 border-primary">
 					<Grid
 						actions={true}
 						product={products.products}

@@ -1,0 +1,105 @@
+@import 'mixins';
+// Classes with color and direction
+
+ // Classes with direction only
+ @each $side in $sides {
+    @each $color, $value in $colors2 {
+        .border#{$side}-#{$color} {
+        border#{$side}-style: solid;
+        border#{$side}-color: $value;
+        }
+    }
+ }
+
+ // Other helpers
+ .border-radius-collapse {
+    border-radius: 0;
+  }
+
+  .margin-vertical-collapse {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .margin-horizontal-collapse {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .padding-horizontal-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .padding-vertical-collapse {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .border-radius-unset {
+    border-radius: unset;
+  }
+
+  .margin-vertical-unset {
+    margin-top: unset;
+    margin-bottom: unset;
+  }
+
+  .margin-horizontal-unset {
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  .padding-horizontal-unset {
+    padding-left: unset;
+    padding-right: unset;
+  }
+
+  .padding-vertical-unset {
+    padding-top: unset;
+    padding-bottom: unset;
+  }
+
+  .margin-vertical-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .margin-horizontal-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .padding-horizontal-auto {
+    padding-left: auto;
+    padding-right: auto;
+  }
+
+  .padding-vertical-auto {
+    padding-top: auto;
+    padding-bottom: auto;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .overflow-unset {
+    overflow: unset;
+  }
+
+  .overflow-x-unset {
+    overflow-x: unset;
+  }
+
+  .overflow-y-unset {
+    overflow-y: unset;
+  }

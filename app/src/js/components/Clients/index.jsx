@@ -118,7 +118,7 @@ class Client extends Component {
 				<div className="col s12 m4 l3">
 					<Form createClient={this.createClient} loadClient={this.loadClient} />
 				</div>
-				<div className="col s12 m8 l9">
+				<div className="col s12 m8 l9 border-primary">
 					<Grid clients={clients.clients} optionsClient={this.optionsClient} />
 				</div>
 				<Modal

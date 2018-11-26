@@ -70,7 +70,7 @@ class Users extends Component {
 				<div className="col s12 m4 l3">
 					<Form createUsers={this.createUsers} loadUsers={this.loadUsers} />
 				</div>
-				<div className="col s12 m8 l9">
+				<div className="col s12 m8 l9 border-primary">
 					<Grid users={users.users} optionsUsers={this.optionsUsers} />
 				</div>
 			</div>
