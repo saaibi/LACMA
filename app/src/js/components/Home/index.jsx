@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import Screen from './Screen'
+
 class HomePage extends Component {
 
     componentDidMount() {
-		$('.sidenav').sidenav({
-			edge: 'left',
+        $('.sidenav').sidenav({
+            edge: 'left',
         });
-        $(".dropdown-trigger").dropdown();
     }
-    
+
     render() {
         return (
-            <div>
-                <h1>Logged in</h1>
+            <div className="container home-component">
+                <Screen />
             </div>
         )
     }

@@ -1,0 +1,9 @@
+.home-component{
+    .card{
+        transition: transform .5s;
+        transform: scale(0.9);
+    }
+    .card:hover{
+        transform: scale(1);
+    }
+}

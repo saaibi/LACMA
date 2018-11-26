@@ -15828,5 +15828,12 @@ html body {
   white-space: nowrap;
   transition: transform cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.5s; }
 
+.home-component .card {
+  transition: transform .5s;
+  transform: scale(0.9); }
+
+.home-component .card:hover {
+  transform: scale(1); }
+
 .container {
   width: 97%; }

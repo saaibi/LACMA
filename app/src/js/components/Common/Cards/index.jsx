@@ -5,7 +5,7 @@ import Icon from '../Icons';
 const Cards = ({ className, classNameImage, cardContent, cardTitle, cardTitleReleveal, cardContentReveal, cardContentIcon, cardImage, cardfloatingBtn, cardActios, icons }) => (
     <div className={`card ${className}`}>
         <div className={`card-image ${classNameImage}`}>
-            {cardImage && <img className="activator" src="https://t1.ev.ltmcdn.com/es/posts/3/9/3/img_un_bano_de_bosque_el_arte_de_disfrutar_de_la_naturaleza_393_600.jpg" />}
+            {cardImage && <img className="activator" src={cardImage} />}
             {cardTitle && <span className="card-title">{cardTitle}</span>}
             {cardfloatingBtn && <a className="btn-floating halfway-fab waves-effect waves-light red"><Icon icon={icons.floating} className="right" /></a>}
         </div>
