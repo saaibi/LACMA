@@ -7,6 +7,7 @@ class HomePage extends Component {
 		$('.sidenav').sidenav({
 			edge: 'left',
         });
+        $(".dropdown-trigger").dropdown();
     }
     
     render() {

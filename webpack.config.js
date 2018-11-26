@@ -96,7 +96,7 @@ module.exports = (env, options) => {
                     },
                 },
                 {
-                    test: /\.(jpe?g|png|gif|svg|ico)$/i,
+                    test: /\.(svg)$/i,
                     use: [
                         {
                             loader: "file-loader",
@@ -104,6 +104,14 @@ module.exports = (env, options) => {
                                 outputPath: "assets/"
                             }
                         }
+                    ]
+                },
+                {
+                    test: /.*\.(gif|png|jpe?g|ico)$/i,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                        },
                     ]
                 }
             ]

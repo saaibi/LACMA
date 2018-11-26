@@ -4,16 +4,7 @@ import { connect } from 'react-redux'
 
 import HeaderNoUser from './HeaderNoUser'
 import HeaderUser from './HeaderUser'
-
 class Header extends Component {
-    componentDidMount() {
-        $(".dropdown-trigger").dropdown();
-    }
-
-    componentWillMount(){
-        $(".dropdown-trigger").dropdown();
-    }
-
     render() {
         const { name, isLoggedIn } = this.props
         return (

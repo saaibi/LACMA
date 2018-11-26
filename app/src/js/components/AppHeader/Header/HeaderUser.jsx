@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
+import background from "../../../../../public/images/office.jpg";
+import profile from "../../../../../public/images/yuna.jpg";
+
 const HeaderUser = ({ menu }) => {
     if (menu === "sidenav") {
         return (
@@ -9,9 +12,9 @@ const HeaderUser = ({ menu }) => {
                 <li>
                     <div className="user-view">
                         <div className="background">
-                            <img src="/app/public/images/office.jpg" />
+                            <img src={background} />
                         </div>
-                        <Link to="/"><img className="circle" src="/app/public/images/yuna.jpg" /></Link>
+                        <Link to="/"><img className="circle" src={profile} /></Link>
                         <a href="#name"><span className="white-text name">Saaibi Florez</span></a>
                         <a href="#email"><span className="white-text email">saaibiflorezhernandez@gmail.com</span></a>
                     </div>
