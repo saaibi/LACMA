@@ -26,8 +26,8 @@ const Cards = ({ className, classNameImage, cardContent, cardTitle, cardTitleRel
 Cards.defaultProps = {
     className: '',
     classNameImage: '',
-    cardTitle: 'LPA Software',
-    cardTitleReleveal: 'LPA',
+    cardTitle: '',
+    cardTitleReleveal: 'LACMA',
     icons: {
         floating: "add",
         activatorReveal: "more_vert",

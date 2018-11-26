@@ -11,8 +11,8 @@ $primary-color: color("pink", "base") !default;
 $primary-color-light: lighten($primary-color, 15%);
 $primary-color-dark: darken($primary-color, 15%);
 $secondary-color: color("blue", "base") !default;
-$success-color: color("pink", "lighten-2") !default;
-$error-color: color("blue", "lighten-3") !default;
+$success-color: color("blue", "lighten-3") !default;
+$error-color: color("pink", "lighten-2") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
 $white: #FFFFFF;
