@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import Columns from './Partials/Columns';
 import Rows from './Partials/Rows';
 
-const Grid = ({ product, optionsProduct, actions }) => (
-	<table className="striped centered">
+const Grid = ({ className, product, optionsProduct, actions }) => (
+	<table className={`striped centered ${className}`}>
 		<Columns actions={actions} />
 		<Rows
 			actions={actions}
@@ -16,6 +16,7 @@ const Grid = ({ product, optionsProduct, actions }) => (
 );
 
 Grid.defaultProps = {
+	className: '',
 	actions: false
 };
 

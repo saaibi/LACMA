@@ -77,6 +77,7 @@ class Product extends Component {
 				<div className="col s12 m8 l9 border-primary">
 					<Grid
 						actions={true}
+						className="responsive-table"
 						product={products.products}
 						optionsProduct={this.optionsProduct}
 					/>
