@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import ReactResizeDetector from 'react-resize-detector';
 
 import { sampleActions } from "../../../actions/sample.actions";
 import { screenSize, scrollToTop, getElementSize } from "../../../utils/dom-utils";
@@ -40,6 +41,11 @@ export class ViewSample extends Component {
         this.setState({ range: value, width: widthTable - rangeGrid })
     }
 
+    onResize = () => {
+        const width = screenSize().width;
+        this.setState({ width })
+    }
+
     render() {
         const { samples } = this.props;
         const { range, width } = this.state;
@@ -54,11 +60,12 @@ export class ViewSample extends Component {
                     className="carousels"
                     ref={(node) => { this.grid = node }}
                 >
-                    <Grid samples={samples.samples} />
+                    <Grid samples={samples.samples} className="responsive-table" />
                 </div>
-                <p className="range-field">
+                {width > '992' ? <p className="range-field">
                     <input type="range" id="rangeGrid" name="range" value={range} min="0" max={width} onChange={(e) => this.onRange(e)} />
-                </p>
+                </p> : ''}
+                <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
             </div>
         )
     }

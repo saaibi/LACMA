@@ -5,9 +5,9 @@ import Columns from './Partials/Columns';
 import Rows from './Partials/Rows';
 
 const Grid = (props) => {
-	const { samples, optionsClient } = props;
+	const { samples, className, optionsClient } = props;
 	return (
-		<table id="tableGrid" className="highlight centered">
+		<table id="tableGrid" className={`highlight centered ${className}`}>
 			<Columns />
 			<Rows samples={samples} optionsClient={optionsClient} />
 		</table>

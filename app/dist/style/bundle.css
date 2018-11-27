@@ -13247,7 +13247,7 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus.valid ~ label,
   input[type=search]:not(.browser-default):focus.valid ~ label,
   textarea.materialize-textarea:focus.valid ~ label {
-    color: #f06292; }
+    color: #90CAF9; }
   input:not([type]):focus.invalid ~ label,
   input[type=text]:not(.browser-default):focus.invalid ~ label,
   input[type=password]:not(.browser-default):focus.invalid ~ label,
@@ -13261,7 +13261,7 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus.invalid ~ label,
   input[type=search]:not(.browser-default):focus.invalid ~ label,
   textarea.materialize-textarea:focus.invalid ~ label {
-    color: #90CAF9; }
+    color: #f06292; }
   input:not([type]).validate + label,
   input[type=text]:not(.browser-default).validate + label,
   input[type=password]:not(.browser-default).validate + label,
@@ -13303,8 +13303,8 @@ input.valid[type=search]:not(.browser-default),
 input.valid[type=search]:not(.browser-default):focus,
 textarea.materialize-textarea.valid,
 textarea.materialize-textarea.valid:focus, .select-wrapper.valid > input.select-dropdown {
-  border-bottom: 1px solid #f06292;
-  box-shadow: 0 1px 0 0 #f06292; }
+  border-bottom: 1px solid #90CAF9;
+  box-shadow: 0 1px 0 0 #90CAF9; }
 
 input.invalid:not([type]), input.invalid:not([type]):focus,
 input.invalid[type=text]:not(.browser-default),
@@ -13332,8 +13332,8 @@ input.invalid[type=search]:not(.browser-default):focus,
 textarea.materialize-textarea.invalid,
 textarea.materialize-textarea.invalid:focus, .select-wrapper.invalid > input.select-dropdown,
 .select-wrapper.invalid > input.select-dropdown:focus {
-  border-bottom: 1px solid #90CAF9;
-  box-shadow: 0 1px 0 0 #90CAF9; }
+  border-bottom: 1px solid #f06292;
+  box-shadow: 0 1px 0 0 #f06292; }
 
 input:not([type]).valid ~ .helper-text[data-success],
 input:not([type]):focus.valid ~ .helper-text[data-success],
@@ -13419,7 +13419,7 @@ input[type=search]:not(.browser-default):focus.valid ~ .helper-text:after,
 textarea.materialize-textarea.valid ~ .helper-text:after,
 textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.valid ~ .helper-text:after {
   content: attr(data-success);
-  color: #f06292; }
+  color: #90CAF9; }
 
 input:not([type]).invalid ~ .helper-text:after,
 input:not([type]):focus.invalid ~ .helper-text:after,
@@ -13448,7 +13448,7 @@ input[type=search]:not(.browser-default):focus.invalid ~ .helper-text:after,
 textarea.materialize-textarea.invalid ~ .helper-text:after,
 textarea.materialize-textarea:focus.invalid ~ .helper-text:after, .select-wrapper.invalid ~ .helper-text:after {
   content: attr(data-error);
-  color: #90CAF9; }
+  color: #f06292; }
 
 input:not([type]) + label:after,
 input[type=text]:not(.browser-default) + label:after,
@@ -15099,7 +15099,7 @@ input[type=range]::-ms-thumb {
   padding: 0 1rem; }
 
 .datepicker-clear {
-  color: #90CAF9; }
+  color: #f06292; }
 
 /* Media Queries */
 @media only screen and (min-width: 601px) {
@@ -15241,7 +15241,7 @@ input[type=range]::-ms-thumb {
   justify-content: space-between; }
 
 .timepicker-clear {
-  color: #90CAF9; }
+  color: #f06292; }
 
 .timepicker-close {
   color: #2196F3; }
