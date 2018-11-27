@@ -31,6 +31,11 @@ const HeaderUser = ({ menu }) => {
     if (menu === "nav") {
         return (
             < ul className="right hide-on-med-and-down" >
+                <ul id="dropdown2" className="dropdown-content">
+                    <li><Link to="/viewsamples">Ver</Link></li>
+                    <li className="divider"></li>
+                    <li><Link to="/samples">Crear</Link></li>
+                </ul>
                 <li><Link to="/clients">Clients</Link></li>
                 <li><a className="dropdown-trigger" href="#!" data-target="dropdown2">Muestras<i className="material-icons right">arrow_drop_down</i></a></li>
                 <li><Link to="/results">Resultados</Link></li>

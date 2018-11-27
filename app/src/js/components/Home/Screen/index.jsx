@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Card from '../../Common/Cards'
+import ContentReveal from './Partials/ContentReveal'
 
 import samples from '../../../../../public/images/samples.jpg'
 import clients from '../../../../../public/images/clients.jpg'
@@ -10,32 +11,38 @@ import results from '../../../../../public/images/results.jpg'
 import users from '../../../../../public/images/users.jpg'
 import other from '../../../../../public/images/unnamed.gif'
 
-const ICONS = { floating: "add", activatorReveal: "more_vert", closeReveal: "close" }
-
 const Screen = ({ }) => {
     return (
         <div className="row">
-              <Card
+            <Card
                 className="col s12 m6 l4"
                 cardTitle="Resultados"
                 classNameImage=" waves-effect waves-block waves-light"
                 cardContent="Modulo Resultados"
-                cardContentReveal=".........."
+                cardContentReveal={
+                    <ContentReveal
+                        items={[{ name: 'Ver Resultados', path: 'results' },
+                        { name: 'Crear Resultados', path: 'resultados' }]}
+                    />
+                }
                 cardContentIcon="Opciones"
                 cardTitleReleveal="Detalles Resultados"
-                icons={ICONS}
                 cardImage={results}
             />
 
-              <Card
+            <Card
                 className="col s12 m6 l4"
                 cardTitle="Clientes"
                 classNameImage=" waves-effect waves-block waves-light"
                 cardContent="Modulo Clientes"
-                cardContentReveal=".........."
+                cardContentReveal={
+                    <ContentReveal
+                        items={[{ name: 'Ver Clientes', path: 'clients' },
+                        { name: 'Crear Clientes', path: 'clients' }]}
+                    />
+                }
                 cardContentIcon="Opciones"
                 cardTitleReleveal="Detalles Clientes"
-                icons={ICONS}
                 cardImage={clients}
             />
 
@@ -44,34 +51,46 @@ const Screen = ({ }) => {
                 cardTitle="Productos"
                 classNameImage=" waves-effect waves-block waves-light"
                 cardContent="Modulo Productos"
-                cardContentReveal=".........."
+                cardContentReveal={
+                    <ContentReveal
+                        items={[{ name: 'Ver Productos', path: 'products' },
+                        { name: 'Crear Productos', path: 'products' }]}
+                    />
+                }
                 cardContentIcon="Opciones"
                 cardTitleReleveal="Detalles Productos"
-                icons={ICONS}
                 cardImage={products}
             />
-            
-             <Card
+
+            <Card
                 className="col s12 m6 l4"
                 cardTitle="Muestras"
                 classNameImage=" waves-effect waves-block waves-light"
                 cardContent="Modulo Crear o Ver Muestras"
-                cardContentReveal=".........."
+                cardContentReveal={
+                    <ContentReveal
+                        items={[{ name: 'Ver Muestras', path: 'viewsamples' },
+                        { name: 'Crear Muestras', path: 'samples' }]}
+                    />
+                }
                 cardContentIcon="Opciones"
                 cardTitleReleveal="Detalles Muestras"
-                icons={ICONS}
                 cardImage={samples}
             />
 
-             <Card
+            <Card
                 className="col s12 m6 l4"
                 cardTitle="Usuarios"
                 classNameImage=" waves-effect waves-block waves-light"
                 cardContent="Modulo Usuarios"
-                cardContentReveal=".........."
+                cardContentReveal={
+                    <ContentReveal
+                        items={[{ name: 'Ver Usuarios', path: 'users' },
+                        { name: 'Crear Usuarios', path: 'users' }]}
+                    />
+                }
                 cardContentIcon="Opciones"
                 cardTitleReleveal="Detalles Usuarios"
-                icons={ICONS}
                 cardImage={users}
             />
 
@@ -79,10 +98,13 @@ const Screen = ({ }) => {
                 className="col s12 m6 l4"
                 classNameImage="waves-effect waves-block waves-light"
                 cardContent="Lacma"
-                cardContentReveal=".........."
+                cardContentReveal={
+                    <ContentReveal
+                        items={[{ name: 'LACMA', path: 'lacma' }]}
+                    />
+                }
                 cardContentIcon="Opciones"
                 cardTitleReleveal="Detalles LACMA"
-                icons={ICONS}
                 cardImage={other}
             />
         </div>

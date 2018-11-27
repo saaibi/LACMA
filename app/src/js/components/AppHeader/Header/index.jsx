@@ -18,11 +18,6 @@ class Header extends Component {
         const { name, isLoggedIn } = this.props
         return (
             <div>
-                <ul id="dropdown2" className="dropdown-content">
-                    <li><Link to="/viewsamples">Ver</Link></li>
-                    <li className="divider"></li>
-                    <li><Link to="/samples">Crear</Link></li>
-                </ul>
                 <nav className="">
                     <div className="nav-wrapper">
                         <Link to="/" className="brand-logo">{name}</Link>
