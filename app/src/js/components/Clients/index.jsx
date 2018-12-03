@@ -49,7 +49,7 @@ class Client extends Component {
 
 	updateClient = (e) => {
 		e.preventDefault();
-		const { clientEdit , client_id } = this.state;
+		const { clientEdit, client_id } = this.state;
 		this.props.dispatch(clientActions.updateClient(client_id, clientEdit));
 		$('#modalClient').modal('close')
 	}
@@ -101,13 +101,7 @@ class Client extends Component {
 		const { clients, client, clientCredit } = this.props;
 		const { headerModal, contentModal, clientEdit } = this.state;
 
-		if (clients.isLoading) {
-			if (!clients.clients) {
-				return (
-					<Progress type="circle" />
-				)
-			}
-		}
+		if (clients.isLoading || (!clients.clients)) { return (<Progress type="circle" />) }
 
 		let content = contentModal == "edit" ? content =
 			<Edit client={clientEdit} updateClient={this.updateClient} loadClient={this.loadClientEdit} /> : content =

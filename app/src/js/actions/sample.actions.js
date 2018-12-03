@@ -157,7 +157,7 @@ const updateSample = (samples_id, sampleEdit) => {
 
             if (index === -1) return dispatch(failure("Sample Not found"));
 
-            const sampleUpdate = {  };
+            const sampleUpdate = {};
             const sample = await makeRequestAsync(`/samples/${samples_id}`, "PUT", sampleUpdate);
 
             dispatch(success(index, sample.data.sample));

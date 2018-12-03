@@ -50,8 +50,7 @@ export class ViewSample extends Component {
         const { samples } = this.props;
         const { range, width } = this.state;
 
-        if (samples.isLoading) { return (<Progress type="linear" />) }
-        if (!samples.samples) { return (<Progress type="linear" />) }
+        if (samples.isLoading || (!samples.samples)) { return (<Progress type="linear" />) }
 
         return (
             <div className="border-primary overflow-x-hidden">

@@ -1,6 +1,6 @@
 import findIndex from 'lodash/findIndex'
 import { makeRequestAsync } from '../services'
-import { CLIENT_GET, CLIENT_GETBYID, CLIENT_CREATE, CLIENT_UPDATE, CLIENT_DELETE , CLIENT_CREDIT_GETBYID } from '../constants/client.constans';
+import { CLIENT_GET, CLIENT_GETBYID, CLIENT_CREATE, CLIENT_UPDATE, CLIENT_DELETE, CLIENT_CREDIT_GETBYID } from '../constants/client.constans';
 
 
 const getAllClient = () => {
@@ -149,7 +149,7 @@ const createClient = (clientCreate) => {
         try {
             const client = await makeRequestAsync(`/clients`, "POST", clientCreate);
             dispatch(success(client.data.client));
-            M.toast({html: `${client.data.status}`, classes: 'rounded'});
+            M.toast({ html: `${client.data.status}`, classes: 'rounded' });
         } catch (error) {
             const message = error.message || error;
             dispatch(failure({ error: message }));
@@ -193,11 +193,11 @@ const updateClient = (client_id, clientEdit) => {
 
             if (index === -1) return dispatch(failure("Client Not found"));
 
-            const clientUpdate = { company : clientEdit.company, contact : clientEdit.contact };
+            const clientUpdate = { company: clientEdit.company, contact: clientEdit.contact };
             const client = await makeRequestAsync(`/clients/${client_id}/client`, "PUT", clientUpdate);
 
             dispatch(success(index, client.data.client));
-            M.toast({html: `${client.data.status}`, classes: 'rounded'});
+            M.toast({ html: `${client.data.status}`, classes: 'rounded' });
         } catch (error) {
             const message = error.message || error;
             dispatch(failure({ error: message }));
@@ -242,7 +242,7 @@ const deleteClient = (client_id) => {
 
             const client = await makeRequestAsync(`/clients/${client_id}`, "DELETE");
             dispatch(success(index));
-            M.toast({html: `${client.data.status}`, classes: 'rounded'});
+            M.toast({ html: `${client.data.status}`, classes: 'rounded' });
         } catch (error) {
             const message = error.message || error;
             dispatch(failure(message));

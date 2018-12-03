@@ -57,16 +57,10 @@ class Users extends Component {
 
 	render() {
 		const { users } = this.props;
-		if (users.isLoading) {
-			if (!users.users) {
-				return (
-					<Progress type="circle" />
-				)
-			}
-		}
+		if (users.isLoading || (!users.users)) { return (<Progress type="circle" />) }
 
 		return (
-			<div className="row">
+			<div className="row" >
 				<div className="col s12 m4 l3">
 					<Form createUsers={this.createUsers} loadUsers={this.loadUsers} />
 				</div>

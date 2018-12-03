@@ -61,13 +61,7 @@ class Product extends Component {
 	render() {
 		const { products } = this.props;
 		const { contentModal, clientEdit } = this.state;
-		if (products.isLoading) {
-			if (!products.products) {
-				return (
-					<Progress type="circle" />
-				)
-			}
-		}
+		if (products.isLoading || (!products.products)) { return (<Progress type="circle" />) }
 
 		return (
 			<div className="row">
